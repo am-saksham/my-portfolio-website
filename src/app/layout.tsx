@@ -5,10 +5,11 @@ import { useState, useEffect } from "react";
 import AppBar from "@/components/AppBar";
 import LocationTime from "@/components/LocationTime";
 import ExperienceDetails from "@/components/ExperienceDetails";
+import Link from "next/link";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
-  const [isMouseEffectActive, setIsMouseEffectActive] = useState(true);
+  const [isMouseEffectActive] = useState(true);
 
   useEffect(() => {
     const handleMouseMove = (event: MouseEvent) => {
@@ -131,24 +132,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 flex: 1, // Ensures it takes up available space
               }}
             >
-              <a href="mailto: io.sakshamgupta@gmail.com" target="_blank" rel="noopener noreferrer">
+              <Link href="mailto: io.sakshamgupta@gmail.com" target="_blank" rel="noopener noreferrer">
               <div style={{ padding: "0", margin: "0", fontSize: "20px", color:"black" }}>→ <span className="black-bg">Email</span></div>
-              </a>
-              <a href="https://www.linkedin.com/in/am-saksham-gupta/" target="_blank" rel="noopener noreferrer">
+              </Link>
+              <Link href="https://www.linkedin.com/in/am-saksham-gupta/" target="_blank" rel="noopener noreferrer">
               <div style={{ padding: "0", margin: "0", fontSize: "20px", color:"black" }}>→ <span className="black-bg">LinkedIn</span></div>
-              </a>
-              <a href="https://github.com/am-saksham" target="_blank" rel="noopener noreferrer">
+              </Link>
+              <Link href="https://github.com/am-saksham" target="_blank" rel="noopener noreferrer">
               <div style={{ padding: "0", margin: "0", fontSize: "20px", color:"black" }}>→ <span className="black-bg">GitHub</span></div>
-              </a>
-              <a href="https://www.instagram.com/am_sakshamgupta/" target="_blank" rel="noopener noreferrer">
+              </Link>
+              <Link href="https://www.instagram.com/am_sakshamgupta/" target="_blank" rel="noopener noreferrer">
               <div style={{ padding: "0", margin: "0", fontSize: "20px", color:"black" }}>→ <span className="black-bg">Instagram</span></div>
-              </a>
-              <a href="https://x.com/amsaksham_gupta" target="_blank" rel="noopener noreferrer">
+              </Link>
+              <Link href="https://x.com/amsaksham_gupta" target="_blank" rel="noopener noreferrer">
               <div style={{ padding: "0", margin: "0", fontSize: "20px", color:"black" }}>→ <span className="black-bg">Twitter</span></div>
-              </a>
-              <a href="https://drive.google.com/file/d/1owo4CiyGMgUpzlyULAZsq00PmlSx2MmM/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              </Link>
+              <Link href="https://drive.google.com/file/d/1owo4CiyGMgUpzlyULAZsq00PmlSx2MmM/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <div style={{ padding: "0", margin: "0", fontSize: "20px", color: "black" }}>→ <span className="black-bg">Resume</span></div>
-              </a>
+              </Link>
               
             </div>
 

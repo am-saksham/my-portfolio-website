@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 // Define the props types
 interface ExperienceDetailsProps {
@@ -15,7 +16,7 @@ const ExperienceDetails: React.FC<ExperienceDetailsProps> = ({
   return (
     <div className="experience-details">
       {/* Replaced experience-square with image */}
-      <img src={imageSrc} alt="Experience" className="experience-image" />
+      <Image src={imageSrc} alt="Experience" className="experience-image" width={28} height={28}/>
       <div className="text-column">
         <div className="text-title">
           <span className="black-bg">{title}</span>

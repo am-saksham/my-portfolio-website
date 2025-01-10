@@ -1,4 +1,4 @@
-import AppBar from '@/components/AppBar'; // Import the AppBar component
+// Import the AppBar component
 
 export default function SomePage() {
   return (
