@@ -175,7 +175,7 @@ main {
   display: inline-block;
   font-size: 16px;
   color: white;
-  margin-left: 5px;
+  margin-left: 0px;
   transform: rotate(-60deg); /* Rotate the arrow */
   /* transition: transform 0.3s ease, color 0.3s ease;  */
   /* Smooth rotation */
