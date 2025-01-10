@@ -1,0 +1,424 @@
+/* src/styles/globals.css */
+body, html {
+  margin: 0;
+  padding: 0;
+  background-color: #e0e0db;
+  background-image: url('https://www.transparenttextures.com/patterns/asfalt-light.png'); /* Use a grainy texture */
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100%; /* Allow the body to fill the full height */
+  display: flex;
+  flex-direction: column;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+#work {
+  scroll-margin-top: 0px; /* Adjust based on your header's height */
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Allow main content to be scrollable */
+main {
+  flex-grow: 1; /* Main content area takes up the remaining space */
+  padding-bottom: 20px; /* To add some space for the scrollable content */
+  overflow-y: auto; /* Ensure the content is scrollable */
+}
+
+/* App bar styles */
+.app-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 173px;
+  background-color: #e0e0db;
+  height: 20px; /* Set height to 61px */
+  border-bottom: 2px solid black;
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.app-bar h1 {
+  font-size: 20px;
+  margin-right: 58px;
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 700;
+  font-style: normal; /* Ensure space between the name and nav links */
+}
+
+
+@keyframes noiseAnimation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}
+
+/* Mouse-Following Circle */
+/* Mouse-Following Circle */
+.mouse-following-circle {
+  position: fixed;
+  width: 700px; /* Adjust size */
+  height: 700px; /* Adjust size */
+  border-radius: 50%;
+  pointer-events: none; /* Prevent interaction with the circle */
+  transform: translate(-50%, -50%);
+  background: radial-gradient(circle, rgb(14, 42, 96) 0%, rgba(19, 43, 108, 0.5) 50%, rgba(0, 0, 128, 0) 100%);
+  opacity: 0.7; /* Slight transparency for a softer effect */
+  filter: blur(80px); /* Add a blur effect */
+  transition: left 0.5s ease-out, top 0.5s ease-out;
+  z-index: 9999; /* Ensure it's behind the main content */
+  will-change: transform, opacity, filter; 
+  animation: liquidEffect 3s infinite ease-in-out;
+  background-blend-mode: multiply;
+  background-image: 
+    radial-gradient(circle, rgb(14, 42, 96) 0%, rgba(19, 43, 108, 0.5) 50%, rgba(0, 0, 128, 0) 100%), 
+    url('https://www.transparenttextures.com/patterns/asfalt-light.png');
+  background-size: cover;
+/* Optimize for animations */
+}
+
+/* Adding keyframe animation to make the effect feel liquidy */
+@keyframes liquidEffect {
+  0% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 0.7;
+    filter: blur(80px);
+  }
+  25% {
+    transform: translate(-50%, -50%) scale(1.1) rotate(15deg);
+    opacity: 0.8;
+    filter: blur(70px);
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.2) rotate(30deg);
+    opacity: 0.9;
+    filter: blur(60px);
+  }
+  75% {
+    transform: translate(-50%, -50%) scale(1.15) rotate(45deg);
+    opacity: 0.8;
+    filter: blur(70px);
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1) rotate(0deg);
+    opacity: 0.7;
+    filter: blur(80px);
+  }
+}
+
+/* Apply the liquid effect animation */
+.mouse-following-circle {
+  animation: liquidEffect 3s infinite ease-in-out;
+}
+
+/* Mouse effect container for positioning */
+.mouse-effect-container {
+  position: relative;
+  z-index: 0; /* Keep it on top of the content */
+}
+
+
+
+.nav-links {
+  font-size: 16px;
+  display: flex;
+  gap: 20px;
+  margin-right: auto; 
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 500;
+  font-style: normal; /* Pushes nav links towards the center */
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-family: "acumin-pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.nav-link {
+  position: relative;
+  color: black;
+  text-decoration: none;
+  font-size: 16px;
+  transition: background-color 0.3s ease, color 0.3s ease; /* Only transition color and background */
+}
+
+.title-nav-link {
+  font-size: 20px;
+}
+
+/* Hover effect for nav links */
+.nav-link:hover {
+  background-color: black;
+  color: white;
+  padding: 5px 0;
+}
+
+/* Rotated text arrow */
+.nav-link:hover::after {
+  content: '→';
+  display: inline-block;
+  font-size: 16px;
+  color: white;
+  margin-left: 5px;
+  transform: rotate(-60deg); /* Rotate the arrow */
+  /* transition: transform 0.3s ease, color 0.3s ease;  */
+  /* Smooth rotation */
+}
+
+.social-icons {
+  display: flex;
+  gap: 20px;
+  font-size: 20px;
+}
+
+.social-icons img {
+  width: 28px;
+  height: 28px;
+}
+
+/* Location and Time styles */
+.location-time {
+  padding-top: 143px; /* Add space below the app bar */
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  position: relative;
+}
+
+.location-time p {
+  font-size: 20px;
+  font-weight: normal; /* "Based in Agra" font weight */
+}
+
+.location-text {
+  margin-right: 10px; /* Space between "Based in Agra →" and the time */
+}
+
+.real-time-clock span {
+  font-size: 22px;
+  font-weight: bold; /* Time font weight */
+}
+
+.line {
+  margin-top: 10px; /* Space between text and the line */
+  width: calc(100% - 173px); /* Line will end 173px before the right edge */
+  height: 1px;
+  background-color: black; /* Line color */
+  margin-left: 0; /* Align the line with the "Based in Agra" text */
+}
+
+.introduction-section {
+  position: relative;
+  z-index: 5; /* Keeps this below the mouse-following circle */
+}
+
+.introduction-text {
+  margin-top: 27px; /* Add space below the line */
+  font-size: 96px;
+  font-weight: 400;
+  padding-left: 173px;
+  text-align: start;
+  color: black;
+}
+
+.additional-text {
+  margin-top: 120px; /* Add space below the introduction text */
+  text-align: start;
+  color: black;
+}
+
+.additional-text div {
+  font-size: 20px;
+  font-weight: normal;
+  padding-left: 173px;
+  margin-bottom: 16px;
+}
+
+.introduction-text,
+.additional-text span {
+  cursor: pointer;
+}
+
+
+.additional-text span {
+  font-weight: bold;
+}
+
+/* Black line styles for scroll visibility */
+.experience-section {
+  margin-top: 170px; /* Space above the section */
+  text-align: start;
+  z-index: 1; /* Center the content */
+}
+
+/* Experience Section Row */
+.experience-row {
+  display: flex;
+  justify-content: space-between; /* Push the two texts apart */
+  align-items: center;
+  padding-left: 173px; /* Add padding to the left side */
+  padding-right: 173px; /* Add padding to the right side */
+  margin-top: 168px; /* Keep the space from the previous section */
+}
+
+/* Experience Text Styling */
+.experience-text {
+  font-size: 27px; /* Adjust font size as needed */
+  font-weight: 400;
+  color: black;
+  margin-right: auto; /* Ensure it stays on the left */
+}
+
+/* Years of Experience Text Styling */
+.experience-years {
+  font-size: 20px; /* Adjust font size as needed */
+  font-weight: normal;
+  color: black;
+  text-align: right; /* Align the text to the right */
+  margin-left: auto; /* Add right padding */
+}
+
+/* Black Line Styling */
+.black-line {
+  width: 100%;
+  height: 2px;
+  background-color: black;
+  margin-bottom: 20px; /* Space between the line and the Experience text */
+}
+
+/* Experience Text Styling */
+.experience-title {
+  padding-left: 173px;
+  margin-top: 168px;
+  font-size: 24px; /* Adjust font size as needed */
+  font-weight: 400;
+   /* Or adjust based on your design */
+}
+
+.experience-years span {
+  font-weight: bold;
+}
+
+/* Line Below Experience Title */
+.experience-line {
+  width: calc(100% - 346px); /* Full width minus 173px padding on each side */
+  height: 1px; /* Thickness of the line */
+  background-color: black; /* Line color */
+  margin: 10px auto 0 auto; /* Add some spacing and center the line */
+}
+
+/* Square Shape Below the Line */
+/* Parent container for the square and the text */
+.experience-details {
+  display: flex;
+  align-items: center; /* Align square and text vertically */
+  margin-left: 173px; /* Align with the line and section */
+  margin-top: 30px;
+  margin-bottom: 30px; /* Space above the row */
+}
+
+/* Square styling */
+.experience-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover; /* Ensures the image doesn't stretch */
+  background-color: transparent; /* Ensures the image is transparent */
+}
+
+/* Container for the texts */
+.text-column {
+  display: flex;
+  flex-direction: column; /* Stack texts vertically */
+  gap: 12px; /* Space between the texts */
+  margin-left: 20px; /* Space between the square and the texts */
+}
+
+/* Individual Text Styles */
+.text-column .text-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+}
+
+.text-column .text-description {
+  font-size: 16px;
+  font-weight: normal;
+  color: black;
+}
+
+.transparent-circle {
+  width: 60px; /* Circle size */
+  height: 60px; /* Circle size */
+  border: 1px solid black; /* Black border */
+  border-radius: 50%; /* Make it circular */
+  position: absolute;
+  right: 173px; /* Position it 173px from the right */
+  display: flex;
+  justify-content: center; /* Center the arrow horizontally */
+  align-items: center; /* Center the arrow vertically */
+  font-size: 24px; /* Adjust the size of the arrow */
+  font-weight: bold; /* Make the arrow bold */
+  color: black; /* Set arrow color */
+  background-color: transparent; /* Initial background color */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+.transparent-circle:hover {
+  background-color: black; /* Fill the circle with black */
+  color: white; /* Change the arrow color to white */
+}
+
+.side-project-row {
+  display: flex;
+  justify-content: space-between; /* Push the two texts apart */
+  align-items: center;
+  padding-left: 173px; /* Add padding to the left side */
+  padding-right: 173px; /* Add padding to the right side */
+  margin-top: 120px; 
+}
+
+.text-grid div {
+  padding: 0;
+  margin: 0;
+  display: inline-block; /* Ensure compact width */
+}
+
+.black-bg {
+  padding: 5px 0;
+  transition: background-color 0.3s ease, color 0.3s ease, padding 0.3s ease, border-radius 0.3s ease;
+}
+
+.black-bg:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Initial hidden state */
+[data-animate] {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Visible state */
+[data-animate].in-view {
+  opacity: 1;
+  transform: translateY(0);
+}
