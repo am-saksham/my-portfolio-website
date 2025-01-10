@@ -173,7 +173,7 @@ main {
 .nav-link:hover::after {
   content: '→';
   display: inline-block;
-  font-size: 16px;
+  font-size: 18px;
   color: white;
   margin-left: 0px;
   transform: rotate(-60deg); /* Rotate the arrow */
