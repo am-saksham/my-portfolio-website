@@ -5,6 +5,9 @@ const nextConfig: NextConfig = {
   images: {
     domains: ['images.unsplash.com'], // Add Unsplash domain here
   },
+  devIndicators: {
+    appIsrStatus: false,
+  },
 };
 
 export default nextConfig;
