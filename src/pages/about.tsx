@@ -3,8 +3,8 @@ import AppBar from "../components/AppBar";
 import "../styles/globals.css";
 
 export default function About() {
-  const [gradientPosition, setGradientPosition] = useState<{ x: number; y: number }>({ x: 50, y: 50 });
-  const [smoothPosition, setSmoothPosition] = useState<{ x: number; y: number }>({ x: 50, y: 50 });
+  const [gradientPosition, setGradientPosition] = useState({ x: 50, y: 50 });
+  const [smoothPosition, setSmoothPosition] = useState({ x: 50, y: 50 });
 
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
@@ -12,22 +12,22 @@ export default function About() {
       const yPercent = (e.clientY / window.innerHeight) * 100;
       setGradientPosition({ x: xPercent, y: yPercent });
     };
-
+  
     window.addEventListener("mousemove", handleMouseMove);
     return () => window.removeEventListener("mousemove", handleMouseMove);
   }, []);
 
   useEffect(() => {
-    let animationFrame: number; // Explicitly define type as 'number'
-
+    let animationFrame: number;
+  
     const animate = () => {
       setSmoothPosition((prev) => ({
-        x: prev.x + (gradientPosition.x - prev.x) * 0.01, // Adjust 0.1 for slower animation
-        y: prev.y + (gradientPosition.y - prev.y) * 0.01,
+        x: prev.x + (gradientPosition.x - prev.x) * 0.02, // Slow smooth transition
+        y: prev.y + (gradientPosition.y - prev.y) * 0.02,
       }));
       animationFrame = requestAnimationFrame(animate);
     };
-
+  
     animationFrame = requestAnimationFrame(animate);
     return () => cancelAnimationFrame(animationFrame);
   }, [gradientPosition]);
@@ -38,12 +38,11 @@ export default function About() {
         minHeight: "100vh",
         display: "flex",
         flexDirection: "column",
-        alignItems: "center",
-        background: `radial-gradient(circle at ${smoothPosition.x}% ${smoothPosition.y}%, white 10%, rgb(47, 96, 99) 90%)`,
+        background: `radial-gradient(circle at ${smoothPosition.x}% ${smoothPosition.y}%, #e0e0db 3%, rgb(47, 96, 99) 75%)`,
         backgroundSize: "cover",
         position: "relative",
         overflow: "hidden",
-        transition: "background 0.1s ease-out",
+        fontFamily: "'Poppins', sans-serif",
       }}
     >
       {/* Noise Overlay */}
@@ -63,12 +62,138 @@ export default function About() {
         }}
       />
 
-      {/* Content */}
-      <div style={{ width: "100%", background: "transparent", zIndex: 1 }}>
+      {/* AppBar */}
+      <div style={{ width: "100%", zIndex: 2 }}>
         <AppBar />
       </div>
-      <div style={{ flex: 1, width: "100%", zIndex: 1 }}>
-        {/* Add content here */}
+
+      {/* Content */}
+      <div
+        style={{
+          marginTop: "95px",
+          paddingLeft: "173px",
+          paddingRight: "173px",
+          zIndex: 3,
+          textAlign: "left",
+          width: "calc(100% - 346px)",
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+          marginBottom: "313px",
+        }}
+      >
+        {/* Left Section: Description and Links */}
+        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+          {/* Heading */}
+          <h1 style={{ fontSize: "47px", fontWeight: 500, color: "black" }}>
+            Hi there, this is Saksham.
+          </h1>
+
+          {/* Description */}
+          <p
+            style={{
+              fontSize: "26px",
+              fontWeight: 400,
+              color: "#000",
+              marginTop: "17px",
+              lineHeight: "1.3",
+            }}
+          >
+            A developer driven by curiosity and a passion for building impactful
+            solutions ⚡
+            <br />
+            <br />
+            Currently leading the Android team for my college’s event booking
+            and management app. Previously worked on a startup project
+            empowering Micro, Small & Medium Enterprises (MSMEs).
+            <br />
+            <br />
+            Based in India, pursuing a Computer Science degree at VIT Bhopal.
+            Actively exploring Flutter, machine learning, and competitive
+            programming—targeting ICPC 2025 regionals.
+            <br />
+            <br />
+            My journey in tech started early, fueled by a love for
+            problem-solving and innovation. I’d love to connect—feel free to
+            reach out via the links below!
+          </p>
+
+          {/* List and Image Container */}
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "space-between",
+              alignItems: "center",
+              marginTop: "30px",
+            }}
+          >
+            {/* List */}
+            <ul
+              style={{
+                listStyleType: "none",
+                paddingLeft: "0",
+                fontSize: "24px",
+                fontWeight: 400,
+                color: "#000",
+              }}
+            >
+              <li style={{ marginBottom: "16px" }}>
+                → <a href="mailto:io.sakshamgupta@gmail.com" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">Email</span></a>
+              </li>
+              <li style={{ marginBottom: "16px" }}>
+                → <a href="https://www.linkedin.com/in/am-saksham-gupta/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">LinkedIn</span></a>
+              </li>
+              <li style={{ marginBottom: "16px" }}>
+                → <a href="https://github.com/am-saksham" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">GitHub</span></a>
+              </li>
+              <li style={{ marginBottom: "16px" }}>
+                → <a href="https://twitter.com/saksham" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">Twitter</span></a>
+              </li>
+              <li>
+                → <a href="https://drive.google.com/file/d/1owo4CiyGMgUpzlyULAZsq00PmlSx2MmM/view" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">Resume</span></a>
+              </li>
+            </ul>
+
+            {/* Profile Picture */}
+            <div
+              style={{
+                width: "300px",
+                height: "300px",
+                background: "white",
+                borderRadius: "40px",
+                boxShadow: "0px 20px 40px rgba(0, 0, 0, 0.2)", // Floating effect
+                overflow: "hidden",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                transition: "transform 0.3s ease-out",
+                animation: "float 3s infinite ease-in-out", // Floating animation
+              }}
+            >
+              <img
+                src="/profile-pic.jpg"
+                alt="Profile"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  borderRadius: "40px",
+                }}
+              />
+            </div>
+
+            {/* Add this CSS in your global CSS file or within a <style> tag */}
+            <style>
+              {`
+    @keyframes float {
+      0% { transform: translateY(0px); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0px); }
+    }
+  `}
+            </style>
+          </div>
+        </div>
       </div>
     </div>
   );
