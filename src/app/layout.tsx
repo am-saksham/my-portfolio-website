@@ -167,7 +167,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               marginLeft: "auto", // Padding for the right side
             }}
           >
-            <div style={{ padding: "0", margin: "0", fontSize: "20px" }}>Updated 1/25</div>
+            <div style={{ padding: "0", margin: "0", fontSize: "20px" }}>Updated 3/25</div>
             <div style={{ padding: "0", margin: "0", fontSize: "20px" }}>©SakshamGupta_2025</div>
           </div>
         </div>
