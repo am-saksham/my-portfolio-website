@@ -1,22 +1,35 @@
 import React from "react";
-import Image from "next/image";
+import dynamic from "next/dynamic";
+import { LottieComponentProps } from "lottie-react";
 
-// Define the props types
+// Dynamically import Lottie with SSR disabled
+const Lottie = dynamic(() => import("lottie-react"), { ssr: false });
+
 interface ExperienceDetailsProps {
   title: string;
   description: string;
-  imageSrc: string; // Added the image source as a prop
+  animationData: LottieComponentProps["animationData"];
+  width?: number;
+  height?: number;
 }
 
 const ExperienceDetails: React.FC<ExperienceDetailsProps> = ({
   title,
   description,
-  imageSrc, // Destructure imageSrc from props
+  animationData,
+  width = 100,
+  height = 100,
 }) => {
   return (
     <div className="experience-details">
-      {/* Replaced experience-square with image */}
-      <Image src={imageSrc} alt="Experience" className="experience-image" width={28} height={28}/>
+      {/* Lottie Animation with Custom Size */}
+      <Lottie
+        animationData={animationData}
+        loop
+        className="lottie-animation"
+        style={{ width, height }}
+      />
+
       <div className="text-column">
         <div className="text-title">
           <span className="black-bg">{title}</span>

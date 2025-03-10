@@ -39,7 +39,7 @@ main {
   justify-content: space-between;
   align-items: center;
   padding: 18px 173px;
-  background-color: #e0e0db;
+  background-color: transparent;
   height: 20px; /* Set height to 61px */
   border-bottom: 2px solid black;
   font-family: "acumin-pro", sans-serif;
@@ -156,6 +156,11 @@ main {
   text-decoration: none;
   font-size: 16px;
   transition: background-color 0.3s ease, color 0.3s ease; /* Only transition color and background */
+}
+
+.active-link {
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 .title-nav-link {

@@ -6,6 +6,8 @@ import AppBar from "@/components/AppBar";
 import LocationTime from "@/components/LocationTime";
 import ExperienceDetails from "@/components/ExperienceDetails";
 import Link from "next/link";
+import iosAnimation from "@/animations/ios_club.json";
+import gdgcAnimation from "@/animations/gdgc_logo.json";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -87,13 +89,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <div className="experience-years">Years of Experience <span>→ 1</span></div>
             </div>
             <div className="experience-line"></div>
-            <ExperienceDetails title={"Software Engineering"} description={"Specialized in Frontend Development"} imageSrc={"https://images.unsplash.com/photo-1556745763-1a6f0ddb0250?q=80&w=2885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
+            <ExperienceDetails 
+            title={"Android Team Co-Lead"} 
+            description={"Google Developer Groups on Campus VIT Bhopal"} 
+            animationData={gdgcAnimation} />
             <div className="experience-line"></div>
-            <ExperienceDetails title={"Software Engineering"} description={"Specialized in Frontend Development"} imageSrc={"https://images.unsplash.com/photo-1556745763-1a6f0ddb0250?q=80&w=2885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
-            <div className="experience-line"></div>
-            <ExperienceDetails title={"Software Engineering"} description={"Specialized in Frontend Development"} imageSrc={"https://images.unsplash.com/photo-1556745763-1a6f0ddb0250?q=80&w=2885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
-            <div className="experience-line"></div>
-            <ExperienceDetails title={"Software Engineering"} description={"Specialized in Frontend Development"} imageSrc={"https://images.unsplash.com/photo-1556745763-1a6f0ddb0250?q=80&w=2885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"} />
+            <ExperienceDetails 
+            title={"iOS Developer"} 
+            description={"iOS Club VIT Bhopal"} 
+            animationData={iosAnimation} />
             <div className="experience-line"></div>
           </div>
 
@@ -104,11 +108,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="experience-line"></div>
             <ExperienceDetails
               title={"Portfolio Website"}
-              description={"Designed and developed a personal portfolio using Next.js and Tailwind CSS"} imageSrc={"https://images.unsplash.com/photo-1556745763-1a6f0ddb0250?q=80&w=2885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}            />
+              description={"Designed and developed a personal portfolio using Next.js and Tailwind CSS"} animationData={undefined} />
             <div className="experience-line"></div>
             <ExperienceDetails
               title={"E-commerce App"}
-              description={"Built a full-stack e-commerce application with React and Node.js"} imageSrc={"https://images.unsplash.com/photo-1556745763-1a6f0ddb0250?q=80&w=2885&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"}            />
+              description={"Built a full-stack e-commerce application with React and Node.js"} animationData={undefined}/>
           </div>
 
           <div className="black-line"></div>

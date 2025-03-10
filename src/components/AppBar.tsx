@@ -1,10 +1,12 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { usePathname } from "next/navigation";
 import { FaLinkedinIn, FaInstagram } from 'react-icons/fa'; // LinkedIn & Instagram icons
 import { FiFileText } from 'react-icons/fi'; // CV icon
 
 export default function AppBar() {
   const [isClient, setIsClient] = useState(false); // Track if we're on the client-side
+  const pathname = usePathname();
 
   useEffect(() => {
     setIsClient(true); // Set true when the component mounts in the client
@@ -31,7 +33,7 @@ export default function AppBar() {
       </h1>
       <div className="nav-links">
         <Link href="#work"><span className="nav-link">Work</span></Link>
-        <Link href="#about"><span className="nav-link">About</span></Link>
+        <Link href="/about"><span className={`nav-link ${pathname === "/about" ? "active-link" : ""}`}>About</span></Link>
         <Link href="#photography"><span className="nav-link">Photography</span></Link>
       </div>
       <div className="social-icons">
