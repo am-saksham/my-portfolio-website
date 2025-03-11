@@ -5,9 +5,9 @@ import { useState, useEffect } from "react";
 import AppBar from "@/components/AppBar";
 import LocationTime from "@/components/LocationTime";
 import ExperienceDetails from "@/components/ExperienceDetails";
-import Link from "next/link";
 import iosAnimation from "@/animations/ios_club.json";
 import gdgcAnimation from "@/animations/gdgc_logo.json";
+import Link from "next/link";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
@@ -50,7 +50,9 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <html lang="en">
-      <head />
+      <head>
+        <title>Saksham Gupta</title>
+      </head>
       <body>
         {/* Mouse-Following Circle */}
         {isMouseEffectActive && (
@@ -76,7 +78,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="introduction-text">Hi, this is Saksham.</div>
             <div className="additional-text">
               <div>Currently <span>→ Student @VITBhopal</span></div>
-              <div>Interested <span>→ Web Developer</span></div>
+              <div>Interested <span>→ App Development</span></div>
               <div>Passionate <span>→ About Coding</span></div>
             </div>
           </div>
@@ -90,14 +92,18 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
             <div className="experience-line"></div>
             <ExperienceDetails 
-            title={"Android Team Co-Lead"} 
-            description={"Google Developer Groups on Campus VIT Bhopal"} 
-            animationData={gdgcAnimation} />
+              title={"Android Team Co-Lead"}
+              description={"Google Developer Groups on Campus VIT Bhopal"} 
+              imageData={gdgcAnimation}  
+              isLottie = {true}           
+              />
             <div className="experience-line"></div>
             <ExperienceDetails 
-            title={"iOS Developer"} 
-            description={"iOS Club VIT Bhopal"} 
-            animationData={iosAnimation} />
+              title={"iOS Developer"}
+              description={"iOS Club VIT Bhopal"}
+              imageData={iosAnimation} 
+              isLottie={true}           
+            />
             <div className="experience-line"></div>
           </div>
 
@@ -107,12 +113,31 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             </div>
             <div className="experience-line"></div>
             <ExperienceDetails
-              title={"Portfolio Website"}
-              description={"Designed and developed a personal portfolio using Next.js and Tailwind CSS"} animationData={undefined} />
+              title={"PhishGuard"}
+              description={"Your ultimate shield against phishing attacks, keeping your digital world secure! 🚀🔒"} 
+              imageData="/phishguard.mp4"  
+              isLottie={false}
+              width={100}
+              height={150}
+              />
             <div className="experience-line"></div>
             <ExperienceDetails
-              title={"E-commerce App"}
-              description={"Built a full-stack e-commerce application with React and Node.js"} animationData={undefined}/>
+              title={"CampusEcho"}
+              description={"Stay updated with the latest campus news and events! 📰🎓"} 
+              imageData="/campusecho.mp4"
+              isLottie={false}
+              width={100}
+              height={150}
+              />
+            <div className="experience-line"></div>
+            <ExperienceDetails
+              title={"MonumentMap App"}
+              description={"Discover and navigate historical monuments with ease! 🏛📍"} 
+              imageData="/monumentmap.mp4"
+              isLottie={false}
+              width={100}
+              height={150}
+              />
           </div>
 
           <div className="black-line"></div>

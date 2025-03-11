@@ -1,40 +1,54 @@
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { usePathname } from "next/navigation";
-import { FaLinkedinIn, FaInstagram } from 'react-icons/fa'; // LinkedIn & Instagram icons
-import { FiFileText } from 'react-icons/fi'; // CV icon
+import { usePathname, useRouter } from "next/navigation";
+import { FaLinkedinIn, FaInstagram } from 'react-icons/fa'; 
+import { FiFileText } from 'react-icons/fi'; 
 
 export default function AppBar() {
-  const [isClient, setIsClient] = useState(false); // Track if we're on the client-side
+  const [isClient, setIsClient] = useState(false);
+  const [scrollToWork, setScrollToWork] = useState(false);
   const pathname = usePathname();
+  const router = useRouter();
 
   useEffect(() => {
-    setIsClient(true); // Set true when the component mounts in the client
-  }, []);
+    setIsClient(true);
 
-  if (!isClient) {
-    return null; // Ensure the component does not render during SSR
-  }
+    if (scrollToWork) {
+      const workSection = document.getElementById("work");
+      if (workSection) {
+        setTimeout(() => {
+          workSection.scrollIntoView({ behavior: "smooth" });
+        }, 100);
+      }
+      setScrollToWork(false);
+    }
+  }, [scrollToWork]);
+
+  if (!isClient) return null;
+
+  const handleWorkClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (pathname !== "/") {
+      setScrollToWork(true);
+      router.push("/#work");
+    } else {
+      document.getElementById("work")?.scrollIntoView({ behavior: "smooth" });
+    }
+  };
 
   return (
     <header className="app-bar">
       <h1>
-        {/* Link that uses window.location to go back to the home page */}
-        <Link
-          href="#"
-          onClick={(e) => {
-            e.preventDefault(); // Prevent default link behavior
-            window.location.href = '/'; // Redirect to the home page
-          }}
-          className="nav-link title-nav-link"
-        >
+        <Link href="/" className="nav-link title-nav-link">
           Saksham Gupta
         </Link>
       </h1>
       <div className="nav-links">
-        <Link href="#work"><span className="nav-link">Work</span></Link>
-        <Link href="/about"><span className={`nav-link ${pathname === "/about" ? "active-link" : ""}`}>About</span></Link>
-        <Link href="#photography"><span className="nav-link">Photography</span></Link>
+        <a href="#" className="nav-link" onClick={handleWorkClick}>Work</a>
+        <Link href="/about" className={`nav-link ${pathname === "/about" ? "active-link" : ""}`}>
+          About
+        </Link>
+        <Link href="/#photography" className="nav-link">Photography</Link>
       </div>
       <div className="social-icons">
         <Link href="https://drive.google.com/file/d/1owo4CiyGMgUpzlyULAZsq00PmlSx2MmM/view?usp=sharing" target="_blank" rel="noopener noreferrer">

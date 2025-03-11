@@ -160,6 +160,7 @@ main {
 
 .active-link {
   text-decoration: underline;
+  text-underline-offset: 5px;
   font-weight: bold;
 }
 

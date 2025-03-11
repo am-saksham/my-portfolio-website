@@ -147,7 +147,7 @@ export default function About() {
                 → <a href="https://github.com/am-saksham" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">GitHub</span></a>
               </li>
               <li style={{ marginBottom: "16px" }}>
-                → <a href="https://twitter.com/saksham" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">Twitter</span></a>
+                → <a href="https://x.com/amsaksham_gupta" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">Twitter</span></a>
               </li>
               <li>
                 → <a href="https://drive.google.com/file/d/1owo4CiyGMgUpzlyULAZsq00PmlSx2MmM/view" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">Resume</span></a>
@@ -171,7 +171,7 @@ export default function About() {
               }}
             >
               <img
-                src="/profile-pic.jpg"
+                src="/profile-pic1.jpg"
                 alt="Profile"
                 style={{
                   width: "100%",
