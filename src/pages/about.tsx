@@ -47,7 +47,7 @@ export default function About() {
           minHeight: "100vh",
           display: "flex",
           flexDirection: "column",
-          background: `radial-gradient(circle at ${smoothPosition.x}% ${smoothPosition.y}%, #e0e0db 3%, rgb(47, 96, 99) 75%)`,
+          background: `radial-gradient(circle at ${smoothPosition.x}% ${smoothPosition.y}%, #d5d5d3 3%, rgb(47, 96, 99) 75%)`,
           backgroundSize: "cover",
           position: "relative",
           overflow: "hidden",

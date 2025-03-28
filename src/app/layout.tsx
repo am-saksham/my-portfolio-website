@@ -93,16 +93,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="experience-line"></div>
             <ExperienceDetails 
               title={"Android Team Co-Lead"}
+              slug={"gdgc-club"}
               description={"Google Developer Groups on Campus VIT Bhopal"} 
               imageData={gdgcAnimation}  
-              isLottie = {true}           
+              isLottie = {true}      
+              type={"experience"}      
               />
             <div className="experience-line"></div>
             <ExperienceDetails 
               title={"iOS Developer"}
+              slug={"ios-club"}
               description={"iOS Club VIT Bhopal"}
               imageData={iosAnimation} 
-              isLottie={true}           
+              isLottie={true}          
+              type={"experience"} 
             />
             <div className="experience-line"></div>
           </div>
@@ -114,27 +118,33 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <div className="experience-line"></div>
             <ExperienceDetails
               title={"PhishGuard"}
+              slug={"phishguard"}
               description={"Your ultimate shield against phishing attacks, keeping your digital world secure! 🚀🔒"} 
               imageData="/phishguard.mp4"  
               isLottie={false}
+              type={"projects"}
               width={100}
               height={150}
               />
             <div className="experience-line"></div>
             <ExperienceDetails
               title={"CampusEcho"}
+              slug={"campus-echo"}
               description={"Stay updated with the latest campus news and events! 📰🎓"} 
               imageData="/campusecho.mp4"
               isLottie={false}
+              type={"projects"}
               width={100}
               height={150}
               />
             <div className="experience-line"></div>
             <ExperienceDetails
               title={"MonumentMap App"}
+              slug={"monument-map"}
               description={"Discover and navigate historical monuments with ease! 🏛📍"} 
               imageData="/monumentmap.mp4"
               isLottie={false}
+              type={"projects"}
               width={100}
               height={150}
               />
