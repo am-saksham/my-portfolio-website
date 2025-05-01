@@ -4,7 +4,11 @@ import { usePathname, useRouter } from "next/navigation";
 import { FaLinkedinIn, FaInstagram } from 'react-icons/fa'; 
 import { FiFileText } from 'react-icons/fi'; 
 
-export default function AppBarWhite() {
+interface AppBarWhiteProps {
+  color?: string; // e.g., "#2B2829", "white", "rgba(0,0,0,0.5)"
+}
+
+export default function AppBarWhite({ color = "white" }: AppBarWhiteProps) {
   const [isClient, setIsClient] = useState(false);
   const [scrollToWork, setScrollToWork] = useState(false);
   const pathname = usePathname();
@@ -36,15 +40,15 @@ export default function AppBarWhite() {
   };
 
   return (
-    <header className="app-bar">
+    <header className="app-bar" style={{ backgroundColor: color }}>
       <h1>
         <Link
           href="/"
           className="nav-link title-nav-link"
           onClick={(e) => {
             if (pathname === "/") {
-              e.preventDefault(); // Prevent default navigation
-              router.refresh(); // Force page reload
+              e.preventDefault(); 
+              router.refresh(); 
             }
           }}
         >

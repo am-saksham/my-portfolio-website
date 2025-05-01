@@ -1,0 +1,312 @@
+/* Gradient between AppBar and Divider */
+/* src/styles/gdgc-club.css */
+
+body, html {
+    background-color: #E0E0DB; /* Set the whole background color */
+    margin: 0;
+    padding: 0;
+    height: 100%; /* Ensure the background color fills the entire height */
+  }
+  
+  .relative {
+    background-color: #E0E0DB; /* Apply to the root container */
+    padding-right: 0;
+  }
+
+  .divider {
+    width: 100%;
+    height: 2px;
+    background-color: #000; /* Darker color for contrast */
+    margin-top: 40px;
+    margin-bottom: 40px;
+    display: block;
+    position: relative;    /* Ensure it's placed in the document flow */
+    z-index: 999;          /* Higher than other content */
+  }
+
+.gradient-background {
+  padding-top: 100px;
+  padding-left: 173px;
+    top: 0; /* Start right after the AppBar */
+    left: 0;
+    width: 100%;
+    height: 576px; /* 576px - height of the AppBar (assumed to be 61px) */
+    background: linear-gradient(to bottom, #EA4335 30%, #E0E0DB); /* Red to black gradient */
+    z-index: 1; /* Ensure it stays below the AppBar */
+  }
+
+  .main-heading {
+    position: absolute;
+    top: 100px; /* Adjust this to place the heading where you want it (based on your gradient height) */
+    left: 173px;
+    font-size: 102px;
+    color: white;
+    font-family: "Degular", sans-serif;
+    font-weight: 500; /* Optional, adjust based on your preferred weight */
+    z-index: 2;
+}
+
+.subtext-container {
+  position: absolute;
+  top: 431px; /* Slightly below the heading */
+  left: 173px;
+  display: flex;
+  flex-direction: column;
+  gap: 0px; /* Reduced gap between lines */
+  font-size: 20px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 400;
+  z-index: 2;
+  line-height: 0;
+}
+
+.bold-text {
+  font-weight: 700; /* Bold */
+}
+
+/* Wrapper for the section headings */
+.section-headings-wrapper {
+  display: flex;
+  flex-direction: column; /* Arranges items in a column */
+  gap: 20px; /* Adjusts the gap between the headings */
+  margin-left: 173px;
+  margin-top: 229px; /* Aligns them with the left side */
+}
+
+/* Section heading styles */
+.section-heading {
+  font-size: 47px;
+  font-family: "Degular", sans-serif;
+  color: white;
+  display: inline-block; /* Ensures the background wraps tightly around the text */
+  width: fit-content;
+  z-index: 2;
+  margin: 0;
+}
+
+
+.blue-background {
+  background-color: #4285F4; /* Blue color */
+}
+
+
+.green-background {
+  background-color: #34A853; /* Green color */
+}
+
+
+.yellow-background {
+  background-color: #FBBC05; /* Yellow color */
+}
+
+.red-background {
+  background-color: #EA4335;
+}
+
+.intro-text {
+  margin-left: 173px;
+  margin-top: 71px;
+  font-size: 20px;
+  color: black;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.intro-paragraph {
+  margin-left: 173px;
+  margin-top: 15px;
+  width: 857px;
+  font-size: 20px;
+  color: black;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.my-role-heading {
+  margin-left: 173px;
+  margin-top: 20px;
+  font-size: 20px;
+  color: black;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+
+.my-role-paragraph {
+  margin-left: 173px;
+  margin-top: 15px;
+  width: 857px;
+  font-size: 20px;
+  color: black;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.role-bullets {
+  margin-left: 70px;
+  width: 857px;
+  margin-top: 15px;
+  color: black;
+  font-size: 20px;
+  font-family: sans-serif;
+  list-style: none;
+  padding-left: 0;
+  padding-bottom: 50px;
+}
+
+.role-bullets li {
+  margin-bottom: 10px;
+}
+
+.selected-work-heading {
+  font-size: 42px;
+  margin-left: 173px;
+  margin-top: 72px;
+  color: black;
+  font-family: "Degular", sans-serif;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.divider-narrow {
+  height: 1px;
+  background-color: #000;
+  margin-top: 20px;   /* Reduced from 20px */
+  margin-bottom: 40px;
+  margin-left: 173px;
+  margin-right: 173px;
+}
+
+.row-header {
+  display: flex;
+  flex-direction: row;
+  margin-left: 173px;
+  margin-right: 173px;
+  margin-top: 16px;
+  gap: 259px; /* Controls spacing between groups (01 + Rescue and overview) */
+  font-family: sans-serif;
+  font-size: 26px;
+}
+
+.number-title {
+  display: flex;
+  flex-direction: row;
+  gap: 69px; /* Increased gap between 01 and Rescue */
+}
+
+.column {
+  flex-shrink: 0;
+}
+
+.serial-number {
+  width: 60px;
+  font-weight: bold;
+  color: #EA4335;
+}
+
+.title {
+  width: 120px;
+  font-weight: bold;
+}
+
+.overview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.overview-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.overview-paragraph {
+  font-size: 20px;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+.horizontal-scroll-wrapper {
+  overflow-x: hidden; /* Prevent showing any grey overscroll */
+  padding-right: 0px;
+  padding-bottom: 50px;
+}
+
+.horizontal-scroll-gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 0px; /* Control the space between images */
+  padding-top: 50px;
+  padding-left: 0; /* Remove left padding */
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none; /* Firefox */
+  padding-right: 0px;
+}
+
+.horizontal-scroll-gallery::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.gallery-image {
+  flex: 0 0 auto;
+  height: 728px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 10px;
+  padding-left: 173px;
+  scroll-snap-align: start;
+  padding-right: 0px;
+}
+
+.horizontal-scroll-gallery {
+  padding-right: 0; /* Ensure no padding on the right edge */
+}
+
+.section-headings-wrapper1 {
+  display: flex;
+  flex-direction: column; /* Arranges items in a column */
+  gap: 20px; /* Adjusts the gap between the headings */
+  margin-left: 173px;
+  margin-top: 112px; /* Aligns them with the left side */
+  padding-bottom: 8px;
+}
+
+.custom-paragraph {
+  width: 625px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+.image-wrapper {
+  padding-left: 173px;
+  padding-right: 173px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.final-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.next-page-label {
+  font-size: 26px;
+  font-weight: 400;
+  color: #000;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.next-page-label:hover {
+  background-color: #000;
+  color: #fff;
+}
