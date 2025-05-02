@@ -61,8 +61,11 @@ export default function IOSClubPage() {
         </p>
         <p>
           To learn more about my work with the iOS Club or upcoming initiatives
-          we’re working on, feel free to reach out to me directly at
-          io.sakshamgupta@gmail.com.
+          we’re working on, feel free to reach out to me directly at{" "}
+          <a href="mailto:io.sakshamgupta@gmail.com" className="email-link">
+  io.sakshamgupta@gmail.com
+</a>
+          .
         </p>
       </div>
 
@@ -266,9 +269,21 @@ export default function IOSClubPage() {
       <div className="divider"></div>
 
       <div className="page-navigation-container">
-  <div className="previous-page-label">← GDGC</div>
-  <div className="next-page-label">PhishGuard →</div>
-</div>
+        <div
+          className="previous-page-label"
+          onClick={() => (window.location.href = "/experience/gdgc-club")}
+          style={{ cursor: "pointer" }}
+        >
+          ← GDGC
+        </div>
+        <div
+          className="next-page-label"
+          onClick={() => (window.location.href = "../projects/phishguard")}
+          style={{ cursor: "pointer" }}
+        >
+          PhishGuard →
+        </div>
+      </div>
       <div className="divider"></div>
     </div>
   );

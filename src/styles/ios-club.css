@@ -321,6 +321,19 @@ html {
     color: #fff;
   }
 
+  .email-link {
+    font-weight: bold;
+    text-decoration: none;
+    color: inherit;
+    padding: 2px 0px;
+    transition: background-color 0.2s, color 0.2s;
+  }
+  
+  .email-link:hover {
+    background-color: black;
+    color: white;
+  }
+
   
 
   

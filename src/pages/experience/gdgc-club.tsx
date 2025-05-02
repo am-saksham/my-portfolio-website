@@ -2,6 +2,7 @@ import AppBarWhite from "@/components/AppBarWhite";
 import React from "react";
 import "@/styles/app-bar-white.css";
 import "@/styles/gdgc-club.css";
+import Link from "next/link";
 
 export default function GDGCClubPage() {
   return (
@@ -217,7 +218,13 @@ export default function GDGCClubPage() {
             with Google technologies. It was a rewarding experience that
             strengthened both my technical and leadership skills.
           </p>
-          <p>Want to learn more? I’d happy to chat - reach me directly here.</p>
+          <p>
+            Want to learn more? I’d happy to chat - reach me directly{" "}
+            <a href="mailto:io.sakshamgupta@gmail.com" className="email-link">
+              here
+            </a>
+            .
+          </p>
         </div>
       </div>
 
@@ -233,14 +240,13 @@ export default function GDGCClubPage() {
 
       <div className="divider"></div>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "flex-end",
-          paddingRight: "173px",
-        }}
-      >
-        <div className="next-page-label">iOS Club →</div>
+      <div className="next-page-container">
+        <div
+          className="next-page-label"
+          onClick={() => (window.location.href = "/experience/ios-club")}
+        >
+          iOS Club →
+        </div>
       </div>
 
       <div className="divider"></div>

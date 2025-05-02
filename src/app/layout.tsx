@@ -186,7 +186,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               <Link href="https://x.com/amsaksham_gupta" target="_blank" rel="noopener noreferrer">
               <div style={{ padding: "0", margin: "0", fontSize: "20px", color:"black" }}>→ <span className="black-bg">Twitter</span></div>
               </Link>
-              <Link href="https://drive.google.com/file/d/1owo4CiyGMgUpzlyULAZsq00PmlSx2MmM/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+              <Link href="https://drive.google.com/file/d/15EV6kvYkgVgJDsUeMmVWFE9f1KgEnz9T/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                 <div style={{ padding: "0", margin: "0", fontSize: "20px", color: "black" }}>→ <span className="black-bg">Resume</span></div>
               </Link>
               

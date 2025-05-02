@@ -68,7 +68,7 @@ export default function AppBar() {
       </div>
       <div className="social-icons">
         <Link
-          href="https://drive.google.com/file/d/1owo4CiyGMgUpzlyULAZsq00PmlSx2MmM/view?usp=sharing"
+          href="https://drive.google.com/file/d/15EV6kvYkgVgJDsUeMmVWFE9f1KgEnz9T/view?usp=sharing"
           target="_blank"
           rel="noopener noreferrer"
         >
