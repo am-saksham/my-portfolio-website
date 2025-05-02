@@ -233,11 +233,17 @@ export default function GDGCClubPage() {
 
       <div className="divider"></div>
 
-      <div style={{ display: "flex", justifyContent: "flex-end", paddingRight: "173px" }}>
-  <div className="next-page-label">iOS Club →</div>
-</div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "flex-end",
+          paddingRight: "173px",
+        }}
+      >
+        <div className="next-page-label">iOS Club →</div>
+      </div>
 
-<div className="divider"></div>
+      <div className="divider"></div>
     </div>
   );
 }

@@ -1,0 +1,326 @@
+/* Gradient between AppBar and Divider */
+/* src/styles/gdgc-club.css */
+
+body,
+html {
+    background-color: #E0E0DB;
+    /* Set the whole background color */
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    /* Ensure the background color fills the entire height */
+}
+
+.relative {
+    background-color: #E0E0DB;
+    /* Apply to the root container */
+    padding-right: 0;
+}
+
+.divider {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    /* Darker color for contrast */
+    margin-bottom: 40px;
+    display: block;
+    position: relative;
+    /* Ensure it's placed in the document flow */
+    z-index: 999;
+    /* Higher than other content */
+}
+
+.gradient-background {
+    padding-top: 100px;
+    padding-left: 173px;
+    top: 0;
+    /* Start right after the AppBar */
+    left: 0;
+    width: 100%;
+    height: 576px;
+    /* 576px - height of the AppBar (assumed to be 61px) */
+    background: linear-gradient(to bottom, #000000 30%, #E0E0DB);
+    /* Red to black gradient */
+    z-index: 1;
+    /* Ensure it stays below the AppBar */
+}
+
+.main-heading {
+    position: absolute;
+    top: 100px;
+    /* Adjust this to place the heading where you want it (based on your gradient height) */
+    left: 173px;
+    font-size: 102px;
+    color: white;
+    font-family: "Degular", sans-serif;
+    font-weight: 500;
+    /* Optional, adjust based on your preferred weight */
+    z-index: 2;
+}
+
+.subtext-container {
+    position: absolute;
+    top: 431px;
+    /* Slightly below the heading */
+    left: 173px;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    /* Reduced gap between lines */
+    font-size: 20px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 400;
+    z-index: 2;
+    line-height: 0;
+}
+
+.bold-text {
+    font-weight: 700;
+    /* Bold */
+}
+
+.section-headings-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* Arranges items in a column */
+    gap: 20px;
+    /* Adjusts the gap between the headings */
+    margin-left: 173px;
+    margin-top: 229px;
+    /* Aligns them with the left side */
+}
+
+/* Section heading styles */
+.section-heading {
+    font-size: 47px;
+    font-family: "Degular", sans-serif;
+    color: white;
+    display: inline-block;
+    /* Ensures the background wraps tightly around the text */
+    width: fit-content;
+    z-index: 2;
+    margin: 0;
+}
+
+.black-background {
+    background-color: #333;
+}
+
+.intro-text {
+    margin-left: 173px;
+    margin-top: 71px;
+    font-size: 20px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 700;
+}
+
+.intro-paragraph {
+    margin-left: 173px;
+    margin-top: 15px;
+    width: 857px;
+    font-size: 20px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.full-width-image-container {
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    overflow: hidden;
+    margin-top: 4.3rem;
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    box-sizing: border-box;
+}
+
+.full-width-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.row-header {
+    display: flex;
+    flex-direction: row;
+    margin-left: 173px;
+    margin-right: 173px;
+    margin-top: 95px;
+    gap: 259px; /* Controls spacing between groups (01 + Rescue and overview) */
+    font-family: sans-serif;
+    font-size: 26px;
+  }
+  
+  .number-title {
+    display: flex;
+    flex-direction: row;
+    gap: 69px; /* Increased gap between 01 and Rescue */
+  }
+  
+  .column {
+    flex-shrink: 0;
+  }
+  
+  .serial-number {
+    width: 60px;
+    font-weight: bold;
+  }
+  
+  .title {
+    width: 244px;
+    font-weight: bold;
+  }
+  
+  .overview {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+  
+  .overview-heading {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+  
+  .overview-paragraph {
+    font-size: 20px;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .define-ios-club-img {
+    margin-top: 1.65rem; /* adjust as needed */
+    width: 100%;
+    display: block;
+  }
+
+  .row-header-second {
+    margin-top: 8.5rem; /* or any spacing you prefer */
+  }
+
+  .ios-club-moto {
+    width: 100%;
+    display: block;
+  }
+
+  /* Reduce gap between title and paragraph of the same set */
+.bullet-points li {
+    margin-bottom: 1.5rem; /* Reduced gap between bullet title and paragraph */
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+.bullet-points li p {
+    margin-top: 0.5rem; /* Reduced gap between title and paragraph */
+    color: #000;
+    font-size: 20px;
+    line-height: 1.5;
+    font-weight: 400;
+}
+
+/* Increase the gap between different sets of bullet points */
+.bullet-points ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem; /* Increased gap between different sets of bullet points */
+}
+
+  .square-bullets,
+.square-bullets li,
+.hollow-bullets,
+.hollow-bullets li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.square-bullets {
+  padding-left: 1.5rem;
+}
+
+.square-bullets > li::before {
+  content: "▪"; /* solid square */
+  color: #000;
+  font-size: 1rem;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.hollow-bullets {
+  padding-left: 1.5rem;
+}
+
+.hollow-bullets > li::before {
+  content: "◦"; /* hollow circle */
+  color: #000;
+  font-size: 1rem;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+.ios-group-pic {
+    width: 100%;
+    display: block;
+    margin-bottom: 5.7rem;
+  }
+
+
+  .next-page-label {
+    font-size: 26px;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 1.75rem;
+    margin-right: 173px;
+  }
+  
+  .next-page-label:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .previous-page-label {
+    font-size: 26px;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 1.75rem;
+    margin-left: 173px;
+  }
+  
+  .previous-page-label:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .page-navigation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    font-size: 18px;
+    color: #fff;
+  }
+
+  
+
+  
