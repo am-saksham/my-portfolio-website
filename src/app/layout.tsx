@@ -47,7 +47,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     return () => observer.disconnect();
   }, []);
 
-
   return (
     <html lang="en">
       <head>
@@ -77,36 +76,44 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <div className="introduction-section" data-animate>
             <div className="introduction-text">Hi, this is Saksham.</div>
             <div className="additional-text">
-              <div>Currently <span>→ Student @VITBhopal</span></div>
-              <div>Interested <span>→ App Development</span></div>
-              <div>Passionate <span>→ About Coding</span></div>
+              <div>
+                Currently <span>→ Student @VITBhopal</span>
+              </div>
+              <div>
+                Interested <span>→ App Development</span>
+              </div>
+              <div>
+                Passionate <span>→ About Coding</span>
+              </div>
             </div>
           </div>
 
           {/* Experience Section */}
-          <div id = "work" className="experience-section" data-animiate>
+          <div id="work" className="experience-section" data-animiate>
             <div className="black-line" />
             <div className="experience-row">
               <div className="experience-text">Experience</div>
-              <div className="experience-years">Years of Experience <span>→ 1</span></div>
+              <div className="experience-years">
+                Years of Experience <span>→ 1</span>
+              </div>
             </div>
             <div className="experience-line"></div>
-            <ExperienceDetails 
+            <ExperienceDetails
               title={"Android Team Co-Lead"}
               slug={"gdgc-club"}
-              description={"Google Developer Groups on Campus VIT Bhopal"} 
-              imageData={gdgcAnimation}  
-              isLottie = {true}      
-              type={"experience"}      
-              />
+              description={"Google Developer Groups on Campus VIT Bhopal"}
+              imageData={gdgcAnimation}
+              isLottie={true}
+              type={"experience"}
+            />
             <div className="experience-line"></div>
-            <ExperienceDetails 
+            <ExperienceDetails
               title={"iOS Developer"}
               slug={"ios-club"}
               description={"iOS Club VIT Bhopal"}
-              imageData={iosAnimation} 
-              isLottie={true}          
-              type={"experience"} 
+              imageData={iosAnimation}
+              isLottie={true}
+              type={"experience"}
             />
             <div className="experience-line"></div>
           </div>
@@ -119,95 +126,184 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             <ExperienceDetails
               title={"PhishGuard"}
               slug={"phishguard"}
-              description={"Your ultimate shield against phishing attacks, keeping your digital world secure! 🚀🔒"} 
-              imageData="/phishguard.mp4"  
+              description={
+                "Your ultimate shield against phishing attacks, keeping your digital world secure! 🚀🔒"
+              }
+              imageData="/phishguard.mp4"
               isLottie={false}
               type={"projects"}
               width={100}
               height={150}
-              />
+            />
             <div className="experience-line"></div>
             <ExperienceDetails
               title={"CampusEcho"}
               slug={"campus-echo"}
-              description={"Stay updated with the latest campus news and events! 📰🎓"} 
+              description={
+                "Stay updated with the latest campus news and events! 📰🎓"
+              }
               imageData="/campusecho.mp4"
               isLottie={false}
               type={"projects"}
               width={100}
               height={150}
-              />
+            />
             <div className="experience-line"></div>
             <ExperienceDetails
               title={"MonumentMap App"}
               slug={"monument-map"}
-              description={"Discover and navigate historical monuments with ease! 🏛📍"} 
+              description={
+                "Discover and navigate historical monuments with ease! 🏛📍"
+              }
               imageData="/monumentmap.mp4"
               isLottie={false}
               type={"projects"}
               width={100}
               height={150}
-              />
+            />
           </div>
 
           <div className="black-line"></div>
 
           <div
-              className="text-grid"
-              style={{
-                display: "flex", // Ensures the columns are spaced out evenly // Aligns the items at the top
-                paddingLeft: "173px",
-                paddingRight: "173px", // Keep padding on both sides
-                marginTop: "36px",
-                gap: "284px",
-              }}
-            >
-  {/* Left Column (Text Items) */}
+            className="text-grid"
+            style={{
+              display: "flex", // Ensures the columns are spaced out evenly // Aligns the items at the top
+              paddingLeft: "9.01vw",
+              paddingRight: "9.01vw", // Keep padding on both sides
+              marginTop: "36px",
+              gap: "14.792vw",
+              flexWrap: "wrap",
+            }}
+          >
+            {/* Left Column (Text Items) */}
             <div
+              className="link-grid"
               style={{
                 display: "grid",
                 gridTemplateColumns: "repeat(3, auto)",
-                gap: "14px", // Controls spacing between items in the column
-                flex: 1, // Ensures it takes up available space
+                gap: "14px",
+                flex: 1,
               }}
             >
-              <Link href="mailto: io.sakshamgupta@gmail.com" target="_blank" rel="noopener noreferrer">
-              <div style={{ padding: "0", margin: "0", fontSize: "20px", color:"black" }}>→ <span className="black-bg">Email</span></div>
+              <Link
+                href="mailto: io.sakshamgupta@gmail.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-text">
+                  → <span className="black-bg">Email</span>
+                </div>
               </Link>
-              <Link href="https://www.linkedin.com/in/am-saksham-gupta/" target="_blank" rel="noopener noreferrer">
-              <div style={{ padding: "0", margin: "0", fontSize: "20px", color:"black" }}>→ <span className="black-bg">LinkedIn</span></div>
+              <Link
+                href="https://www.linkedin.com/in/am-saksham-gupta/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-text">
+                  → <span className="black-bg">LinkedIn</span>
+                </div>
               </Link>
-              <Link href="https://github.com/am-saksham" target="_blank" rel="noopener noreferrer">
-              <div style={{ padding: "0", margin: "0", fontSize: "20px", color:"black" }}>→ <span className="black-bg">GitHub</span></div>
+              <Link
+                href="https://github.com/am-saksham"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-text">
+                  → <span className="black-bg">GitHub</span>
+                </div>
               </Link>
-              <Link href="https://www.instagram.com/am_sakshamgupta/" target="_blank" rel="noopener noreferrer">
-              <div style={{ padding: "0", margin: "0", fontSize: "20px", color:"black" }}>→ <span className="black-bg">Instagram</span></div>
+              <Link
+                href="https://www.instagram.com/am_sakshamgupta/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-text">
+                  → <span className="black-bg">Instagram</span>
+                </div>
               </Link>
-              <Link href="https://x.com/amsaksham_gupta" target="_blank" rel="noopener noreferrer">
-              <div style={{ padding: "0", margin: "0", fontSize: "20px", color:"black" }}>→ <span className="black-bg">Twitter</span></div>
+              <Link
+                href="https://x.com/amsaksham_gupta"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-text">
+                  → <span className="black-bg">Twitter</span>
+                </div>
               </Link>
-              <Link href="https://drive.google.com/file/d/15EV6kvYkgVgJDsUeMmVWFE9f1KgEnz9T/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <div style={{ padding: "0", margin: "0", fontSize: "20px", color: "black" }}>→ <span className="black-bg">Resume</span></div>
+              <Link
+                href="https://drive.google.com/file/d/15EV6kvYkgVgJDsUeMmVWFE9f1KgEnz9T/view?usp=sharing"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <div className="link-text">
+                  → <span className="black-bg">Resume</span>
+                </div>
               </Link>
-              
             </div>
 
-  {/* Right Column (Updated and Username) */}
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              gap: "10px", // Gap between the two texts in the right column
-              alignItems: "flex-end", // Align items to the end (right side)
-              marginLeft: "auto", // Padding for the right side
-            }}
-          >
-            <div style={{ padding: "0", margin: "0", fontSize: "20px" }}>Updated 3/25</div>
-            <div style={{ padding: "0", margin: "0", fontSize: "20px" }}>©SakshamGupta_2025</div>
+            {/* Right Column (Updated and Username) */}
+            <div className="right-column">
+              <div className="right-text">Updated 3/25</div>
+              <div className="right-text">©SakshamGupta_2025</div>
+            </div>
           </div>
-        </div>
           {/* Main Content */}
           <main>{children}</main>
+          <style jsx>{`
+            .link-text {
+              padding: 0;
+              margin: 0;
+              font-size: 20px;
+              color: black;
+            }
+
+            .right-column {
+              display: flex;
+              flex-direction: column;
+              gap: 10px;
+              align-items: flex-end;
+              margin-left: auto;
+            }
+
+            .right-text {
+              padding: 0;
+              margin: 0;
+              font-size: 20px;
+            }
+
+            @media (max-width: 768px) {
+              .link-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 12px;
+              }
+
+              .link-text {
+                font-size: 16px;
+              }
+
+              .right-text {
+                font-size: 16px;
+              }
+            }
+
+            @media (max-width: 900px) {
+              .link-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 12px;
+              }
+
+              .link-text {
+                font-size: 16px;
+              }
+
+              .right-text {
+                font-size: 16px;
+              }
+            }
+          `}</style>
         </div>
       </body>
     </html>

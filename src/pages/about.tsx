@@ -82,7 +82,7 @@ export default function About() {
             marginTop: "95px",
             paddingLeft: "173px",
             paddingRight: "173px",
-            zIndex: 3,
+            zIndex: 1,
             textAlign: "left",
             width: "calc(100% - 346px)",
             display: "flex",

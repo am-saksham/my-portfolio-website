@@ -58,17 +58,20 @@ const ExperienceDetails: React.FC<ExperienceDetailsProps> = ({
         />
       ) : null}
 
-      <div className="text-column">
-        <Link href={`${type}/${slug}`} className="clean-link">
-          <div className="text-title">
-            <span className="black-bg">{title}</span>
-          </div>
-        </Link>
-        <div className="text-description">{description}</div>
-      </div>
-      <div className="transparent-circle">
-        <Link href={`${type}/${slug}`} className="clean-link">→</Link>
-      </div>
+      <div className="text-row">
+    <div className="text-column">
+      <Link href={`${type}/${slug}`} className="clean-link">
+        <div className="text-title">
+          <span className="black-bg">{title}</span>
+        </div>
+      </Link>
+      <div className="text-description">{description}</div>
+    </div>
+
+    <div className="transparent-circle">
+      <Link href={`${type}/${slug}`} className="clean-link">→</Link>
+    </div>
+  </div>
     </div>
   );
 };
