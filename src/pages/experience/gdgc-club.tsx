@@ -6,10 +6,12 @@ import Link from "next/link";
 
 export default function GDGCClubPage() {
   return (
-    <div className="relative bg-black min-h-screen text-white">
-      <AppBarWhite color="#EA4335" />
+    <div className="relative bg-black min-h-screen text-white overflow-x-hidden">
+      <div className="fixed top-0 left-0 right-0 z-50 w-full">
+        <AppBarWhite color="#EA4335" />
+      </div>
 
-      <div>
+      <div className="pt-[60px] w-full">
         {/* Gradient background between AppBar and Divider */}
         <div className="gradient-background" />
 
@@ -37,7 +39,7 @@ export default function GDGCClubPage() {
       </div>
 
       {/* Divider using the new CSS class */}
-      <div className="divider" />
+      <div className="divider-compact" />
 
       {/* Wrapper for the section headings */}
       <div className="section-headings-wrapper">

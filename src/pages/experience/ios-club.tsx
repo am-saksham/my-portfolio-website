@@ -31,7 +31,7 @@ export default function IOSClubPage() {
       </div>
 
       {/* Divider using the new CSS class */}
-      <div className="divider" />
+      <div className="divider-compact" />
 
       {/* Wrapper for the section headings */}
       <div className="section-headings-wrapper">
@@ -63,8 +63,8 @@ export default function IOSClubPage() {
           To learn more about my work with the iOS Club or upcoming initiatives
           we’re working on, feel free to reach out to me directly at{" "}
           <a href="mailto:io.sakshamgupta@gmail.com" className="email-link">
-  io.sakshamgupta@gmail.com
-</a>
+            io.sakshamgupta@gmail.com
+          </a>
           .
         </p>
       </div>

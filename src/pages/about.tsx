@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Head from "next/head"; // Import Head for setting the title
+import Head from "next/head";
 import AppBar from "../components/AppBar";
 import "../styles/globals.css";
 
@@ -23,7 +23,7 @@ export default function About() {
 
     const animate = () => {
       setSmoothPosition((prev) => ({
-        x: prev.x + (gradientPosition.x - prev.x) * 0.02, // Slow smooth transition
+        x: prev.x + (gradientPosition.x - prev.x) * 0.02,
         y: prev.y + (gradientPosition.y - prev.y) * 0.02,
       }));
       animationFrame = requestAnimationFrame(animate);
@@ -35,13 +35,14 @@ export default function About() {
 
   return (
     <>
-      {/* Set Page Title */}
       <Head>
         <title>About — Saksham Gupta</title>
-        <meta name="description" content="Learn more about Saksham Gupta, a passionate developer exploring Flutter, machine learning, and competitive programming." />
+        <meta
+          name="description"
+          content="Learn more about Saksham Gupta, a passionate developer exploring Flutter, machine learning, and competitive programming."
+        />
       </Head>
 
-      {/* Page Content */}
       <div
         style={{
           minHeight: "100vh",
@@ -70,7 +71,7 @@ export default function About() {
             zIndex: 0,
           }}
         />
-        
+
         {/* AppBar */}
         <div style={{ width: "100%", zIndex: 2 }}>
           <AppBar />
@@ -78,36 +79,62 @@ export default function About() {
 
         {/* Content */}
         <div
+          className="content-container"
           style={{
-            marginTop: "95px",
-            paddingLeft: "173px",
-            paddingRight: "173px",
+            marginTop: "50px",
+            paddingLeft: "9.01vw",
+            paddingRight: "9.01vw",
             zIndex: 1,
             textAlign: "left",
-            width: "calc(100% - 346px)",
+            width: "calc(100% - 18.021vw)",
             display: "flex",
             justifyContent: "space-between",
             alignItems: "center",
-            marginBottom: "313px",
+            marginBottom: "270px",
           }}
         >
-          {/* Left Section: Description and Links */}
+          {/* Left Section */}
           <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
-            <h1 style={{fontFamily: "Degular", fontSize: "47px", fontWeight: 500, color: "black" }}>
+            {/* Profile image above heading (mobile only) */}
+            <div className="profile-img-mobile">
+              <div className="profile-img-container">
+                <img
+                  src="/profile-pic1.jpg"
+                  alt="Profile"
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    objectFit: "cover",
+                    borderRadius: "40px",
+                  }}
+                />
+              </div>
+            </div>
+
+            {/* Heading */}
+            <h1
+              style={{
+                fontFamily: "Degular",
+                fontSize: "2.938rem",
+                fontWeight: 500,
+                color: "black",
+              }}
+            >
               Hi there, this is Saksham.
             </h1>
 
+            {/* Paragraph */}
             <p
               style={{
-                fontSize: "26px",
+                fontSize: "1.625rem",
                 fontWeight: 400,
                 color: "#000",
                 marginTop: "17px",
                 lineHeight: "1.3",
               }}
             >
-              A developer driven by curiosity and a passion for building impactful
-              solutions ⚡
+              A developer driven by curiosity and a passion for building
+              impactful solutions ⚡
               <br />
               <br />
               Currently leading the Android team for my college’s event booking
@@ -125,15 +152,17 @@ export default function About() {
               reach out via the links below!
             </p>
 
-            {/* List and Image Container */}
+            {/* Links and Desktop Image */}
             <div
               style={{
                 display: "flex",
                 justifyContent: "space-between",
                 alignItems: "center",
-                marginTop: "30px",
+                marginTop: "160px",
               }}
+              className="list-image-container"
             >
+              {/* Links */}
               <ul
                 style={{
                   listStyleType: "none",
@@ -144,38 +173,62 @@ export default function About() {
                 }}
               >
                 <li style={{ marginBottom: "16px" }}>
-                  → <a href="mailto:io.sakshamgupta@gmail.com" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">Email</span></a>
+                  →{" "}
+                  <a
+                    href="mailto:io.sakshamgupta@gmail.com"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <span className="black-bg">Email</span>
+                  </a>
                 </li>
                 <li style={{ marginBottom: "16px" }}>
-                  → <a href="https://www.linkedin.com/in/am-saksham-gupta/" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">LinkedIn</span></a>
+                  →{" "}
+                  <a
+                    href="https://www.linkedin.com/in/am-saksham-gupta/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <span className="black-bg">LinkedIn</span>
+                  </a>
                 </li>
                 <li style={{ marginBottom: "16px" }}>
-                  → <a href="https://github.com/am-saksham" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">GitHub</span></a>
+                  →{" "}
+                  <a
+                    href="https://github.com/am-saksham"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <span className="black-bg">GitHub</span>
+                  </a>
                 </li>
                 <li style={{ marginBottom: "16px" }}>
-                  → <a href="https://x.com/amsaksham_gupta" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">Twitter</span></a>
+                  →{" "}
+                  <a
+                    href="https://x.com/amsaksham_gupta"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <span className="black-bg">Twitter</span>
+                  </a>
                 </li>
                 <li>
-                  → <a href="https://drive.google.com/file/d/1owo4CiyGMgUpzlyULAZsq00PmlSx2MmM/view" target="_blank" rel="noopener noreferrer" style={{ textDecoration: "none", color: "black" }}><span className="black-bg">Resume</span></a>
+                  →{" "}
+                  <a
+                    href="https://drive.google.com/file/d/1owo4CiyGMgUpzlyULAZsq00PmlSx2MmM/view"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{ textDecoration: "none", color: "black" }}
+                  >
+                    <span className="black-bg">Resume</span>
+                  </a>
                 </li>
               </ul>
 
-              {/* Profile Picture */}
-              <div
-                style={{
-                  width: "300px",
-                  height: "300px",
-                  background: "white",
-                  borderRadius: "40px",
-                  boxShadow: "0px 20px 40px rgba(0, 0, 0, 0.2)",
-                  overflow: "hidden",
-                  display: "flex",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  transition: "transform 0.3s ease-out",
-                  animation: "float 3s infinite ease-in-out",
-                }}
-              >
+              {/* Profile Picture for desktop */}
+              <div className="profile-img-container">
                 <img
                   src="/profile-pic1.jpg"
                   alt="Profile"
@@ -187,19 +240,82 @@ export default function About() {
                   }}
                 />
               </div>
-
-              <style>
-                {`
-                  @keyframes float {
-                    0% { transform: translateY(0px); }
-                    50% { transform: translateY(-10px); }
-                    100% { transform: translateY(0px); }
-                  }
-                `}
-              </style>
             </div>
           </div>
         </div>
+
+        {/* Styles */}
+        <style jsx>{`
+          @keyframes float {
+            0% {
+              transform: translateY(0px);
+            }
+            50% {
+              transform: translateY(-10px);
+            }
+            100% {
+              transform: translateY(0px);
+            }
+          }
+
+          .content-container {
+            margin-bottom: 55px !important; /* or any smaller value you prefer */
+          }
+
+          .profile-img-container {
+            width: 300px;
+            height: 300px;
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease-out;
+            animation: float 3s infinite ease-in-out;
+          }
+
+          .profile-img-mobile {
+            display: none;
+          }
+
+          @media (max-width: 768px) {
+            .profile-img-mobile {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              margin-bottom: 30px;
+            }
+
+            .list-image-container .profile-img-container {
+              display: none;
+            }
+
+            .profile-img-container {
+              width: 199px;
+              height: 199px;
+            }
+
+            h1 {
+              font-size: 2rem !important; /* reduced from 2.938rem */
+              font-weight: 500 !important;
+            }
+
+            p {
+              font-size: 1.313rem !important; /* reduced from 1.625rem */
+              font-weight: 400 !important;
+            }
+
+            ul {
+              font-size: 1.313rem !important; /* reduced from 24px */
+            }
+
+            li {
+              margin-bottom: 15px !important;
+            }
+          }
+        `}</style>
       </div>
     </>
   );

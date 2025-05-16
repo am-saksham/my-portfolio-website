@@ -1,243 +1,623 @@
 /* Gradient between AppBar and Divider */
 /* src/styles/gdgc-club.css */
 
+@media (prefers-color-scheme: dark) {
+
+  html,
+  body {
+    background-color: #E0E0DB !important;
+    color-scheme: light;
+    color: black;
+    /* Optional: Reset text color */
+  }
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Semibold.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Medium.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Light.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Regular.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
 body,
 html {
-    background-color: #E0E0DB;
-    /* Set the whole background color */
-    margin: 0;
-    padding: 0;
-    height: 100%;
+  background-color: #E0E0DB;
+  /* Set the whole background color */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow-x: hidden
     /* Ensure the background color fills the entire height */
 }
 
 .relative {
-    background-color: #E0E0DB;
-    /* Apply to the root container */
-    padding-right: 0;
+  background-color: #E0E0DB;
+  /* Apply to the root container */
+  padding-right: 0;
 }
 
 .divider {
-    width: 100%;
-    height: 2px;
-    background-color: #000;
-    /* Darker color for contrast */
-    margin-bottom: 40px;
-    display: block;
-    position: relative;
-    /* Ensure it's placed in the document flow */
-    z-index: 999;
-    /* Higher than other content */
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  /* Darker color for contrast */
+  margin-bottom: 40px;
+  display: block;
+  position: relative;
+  /* Ensure it's placed in the document flow */
+  z-index: 999;
+  /* Higher than other content */
 }
 
 .gradient-background {
+  padding-top: 0px;
+  padding-left: 9.01vw;
+  top: 0;
+  /* Start right after the AppBar */
+  left: 0;
+  width: 100%;
+  height: 576px;
+  /* 576px - height of the AppBar (assumed to be 61px) */
+  background: linear-gradient(to bottom, #000000 50%, #E0E0DB);
+  /* Red to black gradient */
+  z-index: 1;
+  /* Ensure it stays below the AppBar */
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.main-heading {
+  position: relative;
+  top: -438px;
+  /* Adjust this to place the heading where you want it (based on your gradient height) */
+  left: 9.01vw;
+  font-size: 102px;
+  color: white;
+  font-family: "Degular", sans-serif;
+  font-weight: 500;
+  /* Optional, adjust based on your preferred weight */
+  z-index: 2;
+  margin-top: 0px;
+}
+
+@media (max-width: 600px) {
+
+  .gradient-background {
     padding-top: 100px;
-    padding-left: 173px;
+    padding-left: 9.01vw;
     top: 0;
     /* Start right after the AppBar */
     left: 0;
     width: 100%;
-    height: 576px;
+    height: 330px;
     /* 576px - height of the AppBar (assumed to be 61px) */
     background: linear-gradient(to bottom, #000000 30%, #E0E0DB);
     /* Red to black gradient */
     z-index: 1;
     /* Ensure it stays below the AppBar */
-}
+  }
 
-.main-heading {
-    position: absolute;
-    top: 100px;
+  .main-heading {
+    position: relative;
+    top: -300px;
     /* Adjust this to place the heading where you want it (based on your gradient height) */
-    left: 173px;
-    font-size: 102px;
+    left: 9.01vw;
+    font-size: 61px;
     color: white;
     font-family: "Degular", sans-serif;
-    font-weight: 500;
+    font-weight: 400;
     /* Optional, adjust based on your preferred weight */
     z-index: 2;
+  }
 }
 
 .subtext-container {
-    position: absolute;
-    top: 431px;
+  position: relative;
+  top: -419px;
+  /* Slightly below the heading */
+  left: 9.01vw;
+  padding-right: 9.01vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  /* Reduced gap between lines */
+  font-size: 20px;
+  color: white;
+  font-family: sans-serif;
+  font-weight: 400;
+  z-index: 2;
+  line-height: 0;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .subtext-container {
+    position: relative;
+    top: -330px;
     /* Slightly below the heading */
-    left: 173px;
+    left: 9.01vw;
     display: flex;
     flex-direction: column;
     gap: 0px;
     /* Reduced gap between lines */
-    font-size: 20px;
+    font-size: 18px;
     color: white;
     font-family: sans-serif;
     font-weight: 400;
     z-index: 2;
     line-height: 0;
+  }
 }
 
 .bold-text {
-    font-weight: 700;
-    /* Bold */
+  font-weight: 700;
+  /* Bold */
 }
 
 .section-headings-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* Arranges items in a column */
+  gap: 20px;
+  /* Adjusts the gap between the headings */
+  margin-left: 9.01vw;
+  margin-top: 229px;
+  margin-right: 9.01vw;
+  /* Aligns them with the left side */
+}
+
+/* Section heading styles */
+.section-heading {
+  font-size: 47px;
+  font-family: "Degular", sans-serif;
+  color: white;
+  display: inline-block;
+  /* Ensures the background wraps tightly around the text */
+  width: fit-content;
+  z-index: 2;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .section-headings-wrapper {
     display: flex;
     flex-direction: column;
     /* Arranges items in a column */
     gap: 20px;
     /* Adjusts the gap between the headings */
-    margin-left: 173px;
-    margin-top: 229px;
+    margin-left: 9.01vw;
+    margin-top: 51px;
+    margin-right: 9.01vw;
     /* Aligns them with the left side */
-}
+  }
 
-/* Section heading styles */
-.section-heading {
-    font-size: 47px;
+  /* Section heading styles */
+  .section-heading {
+    font-size: 32px;
     font-family: "Degular", sans-serif;
+    font-weight: 400;
     color: white;
     display: inline-block;
     /* Ensures the background wraps tightly around the text */
     width: fit-content;
     z-index: 2;
     margin: 0;
+  }
+}
+
+.divider-compact {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  margin-top: -200px;
+  /* tighter spacing */
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+  z-index: 999;
+}
+
+@media (max-width: 768px) {
+  .divider-compact {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin-top: -250px;
+    /* tighter spacing */
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    z-index: 999;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .divider-compact {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin-top: -250px;
+    /* tighter spacing */
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    z-index: 999;
+  }
 }
 
 .black-background {
-    background-color: #333;
+  background-color: #333;
 }
 
 .intro-text {
-    margin-left: 173px;
-    margin-top: 71px;
-    font-size: 20px;
-    color: black;
-    font-family: sans-serif;
-    font-weight: 700;
+  margin-left: 9.01vw;
+  margin-top: 71px;
+  font-size: 20px;
+  color: black;
+  font-family: sans-serif;
+  font-weight: 700;
 }
 
 .intro-paragraph {
-    margin-left: 173px;
+  margin-left: 9.01vw;
+  margin-top: 15px;
+  width: 857px;
+  font-size: 20px;
+  color: black;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .intro-text {
+    margin-left: 9.01vw;
+    margin-top: 119px;
+    font-size: 18px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 700;
+  }
+
+  .intro-paragraph {
+    margin-left: 9.01vw;
+    padding-right: 9.01vw;
     margin-top: 15px;
-    width: 857px;
-    font-size: 20px;
+    width: 100%;
+    font-size: 18px;
     color: black;
     font-family: sans-serif;
     font-weight: 400;
     line-height: 1.5;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .intro-text {
+    margin-left: 9.01vw;
+    margin-top: 119px;
+    font-size: 18px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 700;
+  }
+
+  .intro-paragraph {
+    margin-left: 9.01vw;
+    padding-right: 9.01vw;
+    margin-top: 15px;
+    width: 100%;
+    font-size: 18px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
 }
 
 .full-width-image-container {
-    width: 100vw;
-    position: relative;
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    overflow: hidden;
-    margin-top: 4.3rem;
-    border-top: 2px solid #000;
-    border-bottom: 2px solid #000;
-    box-sizing: border-box;
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  margin-top: 4.3rem;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  box-sizing: border-box;
 }
 
 .full-width-image {
-    width: 100%;
-    height: auto;
-    display: block;
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .row-header {
+  display: flex;
+  flex-direction: row;
+  margin-left: 9.01vw;
+  margin-right: 9.01vw;
+  margin-top: 95px;
+  gap: 259px;
+  /* Controls spacing between groups (01 + Rescue and overview) */
+  font-family: sans-serif;
+  font-size: 26px;
+}
+
+.number-title {
+  display: flex;
+  flex-direction: row;
+  gap: 69px;
+  /* Increased gap between 01 and Rescue */
+}
+
+.column {
+  flex-shrink: 0;
+}
+
+.serial-number {
+  width: 60px;
+  font-weight: bold;
+}
+
+.title {
+  width: 244px;
+  font-weight: bold;
+}
+
+.overview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.overview-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.overview-paragraph {
+  font-size: 20px;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .row-header {
     display: flex;
-    flex-direction: row;
-    margin-left: 173px;
-    margin-right: 173px;
+    flex-direction: column;
+    margin-left: 9.01vw;
+    margin-right: 9.01vw;
     margin-top: 95px;
-    gap: 259px; /* Controls spacing between groups (01 + Rescue and overview) */
+    gap: 30px;
+    /* Controls spacing between groups (01 + Rescue and overview) */
     font-family: sans-serif;
-    font-size: 26px;
+    font-size: 21px;
   }
-  
+
   .number-title {
     display: flex;
-    flex-direction: row;
-    gap: 69px; /* Increased gap between 01 and Rescue */
+    flex-direction: column;
+    gap: 34px;
+    /* Increased gap between 01 and Rescue */
   }
-  
+
   .column {
     flex-shrink: 0;
   }
-  
+
   .serial-number {
     width: 60px;
     font-weight: bold;
   }
-  
+
   .title {
     width: 244px;
     font-weight: bold;
   }
-  
+
   .overview {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 4px;
   }
-  
+
   .overview-heading {
     font-size: 20px;
     font-weight: 700;
     margin: 0;
     margin-bottom: 15px;
   }
-  
+
   .overview-paragraph {
-    font-size: 20px;
+    font-size: 18px;
     margin: 0 0 15px 0;
     line-height: 1.5;
     font-weight: 400;
   }
+}
 
-  .define-ios-club-img {
-    margin-top: 1.65rem; /* adjust as needed */
-    width: 100%;
-    display: block;
+@media (min-width: 769px) and (max-width: 1024px) {
+  .row-header {
+    display: flex;
+    flex-direction: column;
+    margin-left: 9.01vw;
+    margin-right: 9.01vw;
+    margin-top: 95px;
+    gap: 30px;
+    /* Controls spacing between groups (01 + Rescue and overview) */
+    font-family: sans-serif;
+    font-size: 21px;
   }
 
-  .row-header-second {
-    margin-top: 8.5rem; /* or any spacing you prefer */
+  .number-title {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    /* Increased gap between 01 and Rescue */
   }
 
-  .ios-club-moto {
-    width: 100%;
-    display: block;
+  .column {
+    flex-shrink: 0;
   }
 
-  /* Reduce gap between title and paragraph of the same set */
-.bullet-points li {
-    margin-bottom: 1.5rem; /* Reduced gap between bullet title and paragraph */
+  .serial-number {
+    width: 60px;
+    font-weight: bold;
+  }
+
+  .title {
+    width: 244px;
+    font-weight: bold;
+  }
+
+  .overview {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .overview-heading {
     font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .overview-paragraph {
+    font-size: 18px;
+    margin: 0 0 15px 0;
     line-height: 1.5;
     font-weight: 400;
+  }
+}
+
+.define-ios-club-img {
+  margin-top: 1.65rem;
+  /* adjust as needed */
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .define-ios-club-img {
+    margin-top: 1.65rem;
+    /* adjust as needed */
+    width: 70%;
+    display: block;
+  }
+}
+
+.row-header-second {
+  margin-top: 8.5rem;
+  /* or any spacing you prefer */
+}
+
+@media (max-width: 768px) {
+  .row-header-second {
+    margin-top: 35px;
+    /* or any spacing you prefer */
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .row-header-second {
+    margin-top: 35px;
+    /* or any spacing you prefer */
+  }
+}
+
+.ios-club-moto {
+  width: 100%;
+  display: block;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ios-club-moto {
+    width: 90%;
+    display: block;
+  }
+}
+
+/* Reduce gap between title and paragraph of the same set */
+.bullet-points li {
+  margin-bottom: 1.5rem;
+  /* Reduced gap between bullet title and paragraph */
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 .bullet-points li p {
-    margin-top: 0.5rem; /* Reduced gap between title and paragraph */
-    color: #000;
-    font-size: 20px;
-    line-height: 1.5;
-    font-weight: 400;
+  margin-top: 0.5rem;
+  /* Reduced gap between title and paragraph */
+  color: #000;
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 /* Increase the gap between different sets of bullet points */
 .bullet-points ul {
-    list-style-type: disc;
-    padding-left: 1.5rem;
-    margin-bottom: 1.5rem; /* Increased gap between different sets of bullet points */
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  /* Increased gap between different sets of bullet points */
 }
 
-  .square-bullets,
+.square-bullets,
 .square-bullets li,
 .hollow-bullets,
 .hollow-bullets li {
@@ -250,8 +630,9 @@ html {
   padding-left: 1.5rem;
 }
 
-.square-bullets > li::before {
-  content: "▪"; /* solid square */
+.square-bullets>li::before {
+  content: "▪";
+  /* solid square */
   color: #000;
   font-size: 1rem;
   display: inline-block;
@@ -263,8 +644,9 @@ html {
   padding-left: 1.5rem;
 }
 
-.hollow-bullets > li::before {
-  content: "◦"; /* hollow circle */
+.hollow-bullets>li::before {
+  content: "◦";
+  /* hollow circle */
   color: #000;
   font-size: 1rem;
   display: inline-block;
@@ -272,68 +654,270 @@ html {
   margin-left: -1em;
 }
 
+@media (max-width: 768px) {
+  .bullet-points li {
+    margin-bottom: 1.5rem;
+    /* Reduced gap between bullet title and paragraph */
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .bullet-points li p {
+    margin-top: 0.5rem;
+    /* Reduced gap between title and paragraph */
+    color: #000;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  /* Increase the gap between different sets of bullet points */
+  .bullet-points ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    /* Increased gap between different sets of bullet points */
+  }
+
+  .square-bullets,
+  .square-bullets li,
+  .hollow-bullets,
+  .hollow-bullets li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .square-bullets {
+    padding-left: 1.5rem;
+  }
+
+  .square-bullets>li::before {
+    content: "▪";
+    /* solid square */
+    color: #000;
+    font-size: 1rem;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+
+  .hollow-bullets {
+    padding-left: 1.5rem;
+  }
+
+  .hollow-bullets>li::before {
+    content: "◦";
+    /* hollow circle */
+    color: #000;
+    font-size: 1rem;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .bullet-points li {
+    margin-bottom: 1.5rem;
+    /* Reduced gap between bullet title and paragraph */
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  .bullet-points li p {
+    margin-top: 0.5rem;
+    /* Reduced gap between title and paragraph */
+    color: #000;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+
+  /* Increase the gap between different sets of bullet points */
+  .bullet-points ul {
+    list-style-type: disc;
+    padding-left: 1.5rem;
+    margin-bottom: 1.5rem;
+    /* Increased gap between different sets of bullet points */
+  }
+
+  .square-bullets,
+  .square-bullets li,
+  .hollow-bullets,
+  .hollow-bullets li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .square-bullets {
+    padding-left: 1.5rem;
+  }
+
+  .square-bullets>li::before {
+    content: "▪";
+    /* solid square */
+    color: #000;
+    font-size: 0.78rem;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+    margin-right: 0.5em;
+  }
+
+  .hollow-bullets {
+    padding-left: 1.5rem;
+  }
+
+  .hollow-bullets>li::before {
+    content: "◦";
+    /* hollow circle */
+    color: #000;
+    font-size: 1rem;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+  }
+}
+
 .ios-group-pic {
-    width: 100%;
+  width: 100%;
+  display: block;
+  margin-bottom: 5.7rem;
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .ios-group-pic {
+    width: 85%;
     display: block;
     margin-bottom: 5.7rem;
   }
+}
 
 
+.next-page-label {
+  font-size: 26px;
+  font-weight: 400;
+  color: #000;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1.75rem;
+  margin-right: 9.01vw;
+}
+
+.next-page-label:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.previous-page-label {
+  font-size: 26px;
+  font-weight: 400;
+  color: #000;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1.75rem;
+  margin-left: 9.01vw;
+}
+
+.previous-page-label:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
   .next-page-label {
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 400;
     color: #000;
     display: inline-block;
     transition: all 0.3s ease;
     cursor: pointer;
     margin-bottom: 1.75rem;
-    margin-right: 173px;
+    margin-right: 9.01vw;
   }
-  
+
   .next-page-label:hover {
     background-color: #000;
     color: #fff;
   }
 
   .previous-page-label {
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 400;
     color: #000;
     display: inline-block;
     transition: all 0.3s ease;
     cursor: pointer;
     margin-bottom: 1.75rem;
-    margin-left: 173px;
+    margin-left: 9.01vw;
   }
-  
+
   .previous-page-label:hover {
     background-color: #000;
     color: #fff;
   }
+}
 
-  .page-navigation-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-    font-size: 18px;
+@media (min-width: 769px) and (max-width: 1024px) {
+  .next-page-label {
+    font-size: 21px;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 1.75rem;
+    margin-right: 9.01vw;
+  }
+
+  .next-page-label:hover {
+    background-color: #000;
     color: #fff;
   }
 
-  .email-link {
-    font-weight: bold;
-    text-decoration: none;
-    color: inherit;
-    padding: 2px 0px;
-    transition: background-color 0.2s, color 0.2s;
-  }
-  
-  .email-link:hover {
-    background-color: black;
-    color: white;
+  .previous-page-label {
+    font-size: 21px;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 1.75rem;
+    margin-left: 9.01vw;
   }
 
-  
+  .previous-page-label:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
 
-  
+
+.page-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.email-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  padding: 2px 0px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.email-link:hover {
+  background-color: black;
+  color: white;
+}
