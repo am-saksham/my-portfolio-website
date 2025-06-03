@@ -16,7 +16,7 @@ const RealTimeClock = () => {
   }, []);
 
   return (
-    <span className="real-time" style={{ fontWeight: 'bold' }}>
+    <span className="real-time" style={{ fontWeight: 'bold', fontFamily: 'Open Sans' }}>
       {time}
     </span>
   );

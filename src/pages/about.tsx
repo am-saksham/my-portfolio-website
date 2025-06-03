@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import AppBar from "../components/AppBar";
 import "../styles/globals.css";
+import Image from 'next/image';
 
 export default function About() {
   const [gradientPosition, setGradientPosition] = useState({ x: 50, y: 50 });
@@ -98,7 +99,7 @@ export default function About() {
             {/* Profile image above heading (mobile only) */}
             <div className="profile-img-mobile">
               <div className="profile-img-container">
-                <img
+                <Image
                   src="/profile-pic1.jpg"
                   alt="Profile"
                   style={{
@@ -229,7 +230,7 @@ export default function About() {
 
               {/* Profile Picture for desktop */}
               <div className="profile-img-container">
-                <img
+                <Image
                   src="/profile-pic1.jpg"
                   alt="Profile"
                   style={{

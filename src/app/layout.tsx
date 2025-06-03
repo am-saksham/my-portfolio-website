@@ -51,6 +51,12 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <html lang="en">
       <head>
         <title>Saksham Gupta</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
+          rel="stylesheet"
+        />
       </head>
       <body>
         {/* Mouse-Following Circle */}

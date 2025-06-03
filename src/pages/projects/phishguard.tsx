@@ -2,11 +2,17 @@ import AppBarWhite from "@/components/AppBarWhite";
 import React from "react";
 import "@/styles/app-bar-white.css";
 import "@/styles/phishguard.css";
-import Link from "next/link";
+import { Open_Sans } from "next/font/google";
+import Image from 'next/image';
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"], // You can include other weights if needed
+});
 
 export default function GDGCClubPage() {
   return (
-    <div className="relative bg-black min-h-screen text-white overflow-x-hidden">
+    <div className={`relative bg-black min-h-screen text-white overflow-x-hidden ${openSans.className}`}>
       <div className="fixed top-0 left-0 right-0 z-50 w-full">
         <AppBarWhite color="#055FFA" />
       </div>
@@ -70,7 +76,7 @@ export default function GDGCClubPage() {
       </div>
 
       <div className="full-width-image-container">
-        <img
+        <Image
           src="/projects/phishguard-mockup.png"
           alt="iOS Club Banner"
           className="full-width-image"
@@ -96,12 +102,12 @@ export default function GDGCClubPage() {
             I wanted to create a tool that provides real-time protection without
             interrupting the everyday browsing experience.
           </p>
-          <img
+          <Image
             src="/projects/phishguard-img1.png"
             alt="phishguard-img1"
             className="phishguard-img"
           />
-          <img
+          <Image
             src="/projects/phishguard-img2.png"
             alt="phishguard-img2"
             className="phishguard-img"
@@ -125,7 +131,7 @@ export default function GDGCClubPage() {
             specifically, I explored how users interact with links in daily
             life, and whether they consider the risks involved.
           </p>
-          <img
+          <Image
             src="/projects/phishguard-img3.png"
             alt="phishguard-img3"
             className="phishguard-img"
@@ -148,7 +154,7 @@ export default function GDGCClubPage() {
             cybersecurity training, I drew a parallel to guided vs unguided
             safety mechanisms:
           </p>
-          <img
+          <Image
             src="/projects/phishguard-img4.png"
             alt="phishguard-img4"
             className="phishguard-img"
@@ -167,7 +173,7 @@ export default function GDGCClubPage() {
             real-time tools that build habitual digital safety. Our takeaway:
             make it fast, make it accurate, and keep it seamless.
           </p>
-          <img
+          <Image
             src="/projects/phishguard-img5.png"
             alt="phishguard-img5"
             className="phishguard-img"
@@ -203,7 +209,7 @@ export default function GDGCClubPage() {
             pre-click behavior allowed us to build a real-time intervention
             system without altering user habits.
           </p>
-          <img
+          <Image
             src="/projects/phishguard-img8.png"
             alt="phishguard-img8"
             className="phishguard-img"
@@ -224,7 +230,7 @@ export default function GDGCClubPage() {
             feeling intimidating. Icons and alerts were designed to be instantly
             understandable, especially for non-technical users.
           </p>
-          <img
+          <Image
             src="/projects/phishguard-img9.png"
             alt="phishguard-img9"
             className="phishguard-img"

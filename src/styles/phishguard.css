@@ -186,7 +186,7 @@ html {
     /* Reduced gap between lines */
     font-size: 17px;
     color: white;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-weight: 400;
     z-index: 2;
     line-height: 21.3px;
@@ -210,7 +210,7 @@ html {
     /* Reduced gap between lines */
     font-size: 17px;
     color: white;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-weight: 400;
     z-index: 2;
     line-height: 18px;
@@ -349,7 +349,7 @@ html {
   margin-top: 71px;
   font-size: 20px;
   color: black;
-  font-family: sans-serif;
+  font-family: 'Open Sans',sans-serif;
   font-weight: 700;
 }
 
@@ -360,7 +360,7 @@ html {
   width: 857px;
   font-size: 20px;
   color: black;
-  font-family: sans-serif;
+  font-family: 'Open Sans',sans-serif;
   font-weight: 400;
   line-height: 1.5;
 }
@@ -372,7 +372,7 @@ html {
     margin-top: 71px;
     font-size: 16px;
     color: black;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-weight: 700;
     box-sizing: border-box;
   }
@@ -383,7 +383,7 @@ html {
     margin-top: 15px;
     font-size: 16px;
     color: black;
-    font-family: sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-weight: 400;
     line-height: 1.5;
     width: 100%;
@@ -400,7 +400,7 @@ html {
     margin-top: 71px;
     font-size: 18px;
     color: black;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-weight: 700;
     box-sizing: border-box;
   }
@@ -411,7 +411,7 @@ html {
     margin-top: 15px;
     font-size: 18px;
     color: black;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-weight: 400;
     line-height: 1.5;
     width: 100%;
@@ -451,7 +451,7 @@ html {
   margin-top: 114px;
   gap: 259px;
   /* Controls spacing between groups (01 + Rescue and overview) */
-  font-family: sans-serif;
+  font-family: 'Open Sans',sans-serif;
   font-size: 26px;
 }
 
@@ -506,7 +506,7 @@ html {
     margin-top: 95px;
     gap: 30px;
     /* Controls spacing between groups (01 + Rescue and overview) */
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-size: 21px;
   }
 
@@ -562,7 +562,7 @@ html {
     margin-top: 95px;
     gap: 30px;
     /* Controls spacing between groups (01 + Rescue and overview) */
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-size: 21px;
   }
 
@@ -646,7 +646,7 @@ html {
   width: 625px;
   font-size: 20px;
   line-height: 1.5;
-  font-family: sans-serif;
+  font-family: 'Open Sans',sans-serif;
   font-weight: 400;
 }
 
@@ -669,7 +669,7 @@ html {
     width: 100%;
     font-size: 18px;
     line-height: 1.5;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-weight: 400;
   }
 }
@@ -693,7 +693,7 @@ html {
     width: 100%;
     font-size: 18px;
     line-height: 1.5;
-    font-family: sans-serif;
+    font-family: 'Open Sans',sans-serif;
     font-weight: 400;
   }
 }

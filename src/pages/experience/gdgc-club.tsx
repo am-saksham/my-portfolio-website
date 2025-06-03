@@ -2,11 +2,17 @@ import AppBarWhite from "@/components/AppBarWhite";
 import React from "react";
 import "@/styles/app-bar-white.css";
 import "@/styles/gdgc-club.css";
-import Link from "next/link";
+import { Open_Sans } from "next/font/google";
+import Image from 'next/image';
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"], // You can include other weights if needed
+});
 
 export default function GDGCClubPage() {
   return (
-    <div className="relative bg-black min-h-screen text-white overflow-x-hidden">
+    <div className={`relative bg-black min-h-screen text-white overflow-x-hidden ${openSans.className}`}>
       <div className="fixed top-0 left-0 right-0 z-50 w-full">
         <AppBarWhite color="#EA4335" />
       </div>
@@ -148,47 +154,47 @@ export default function GDGCClubPage() {
       {/* Horizontally scrollable image gallery */}
       <div className="horizontal-scroll-wrapper">
         <div className="horizontal-scroll-gallery">
-          <img
+          <Image
             src="/projects/rescue1.png"
             alt="Image 1"
             className="gallery-image"
           />
-          <img
+          <Image
             src="/projects/rescue2.png"
             alt="Image 1"
             className="gallery-image"
           />
-          <img
+          <Image
             src="/projects/rescue3.png"
             alt="Image 1"
             className="gallery-image"
           />
-          <img
+          <Image
             src="/projects/rescue4.png"
             alt="Image 1"
             className="gallery-image"
           />
-          <img
+          <Image
             src="/projects/rescue5.png"
             alt="Image 1"
             className="gallery-image"
           />
-          <img
+          <Image
             src="/projects/rescue6.png"
             alt="Image 1"
             className="gallery-image"
           />
-          <img
+          <Image
             src="/projects/rescue7.png"
             alt="Image 1"
             className="gallery-image"
           />
-          <img
+          <Image
             src="/projects/rescue8.png"
             alt="Image 1"
             className="gallery-image"
           />
-          <img
+          <Image
             src="/projects/rescue9.png"
             alt="Image 1"
             className="gallery-image"
@@ -233,7 +239,7 @@ export default function GDGCClubPage() {
       <div className="divider"></div>
 
       <div className="image-wrapper">
-        <img
+        <Image
           src="/projects/gdgc_cover.png"
           alt="Description of image"
           className="final-image"

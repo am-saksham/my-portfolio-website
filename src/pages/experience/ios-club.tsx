@@ -4,9 +4,17 @@ import AppBarWhite from "@/components/AppBarWhite";
 import React from "react";
 import "@/styles/app-bar-white.css";
 import "@/styles/ios-club.css";
+import { Open_Sans } from "next/font/google";
+import Image from 'next/image';
+
+const openSans = Open_Sans({
+  subsets: ["latin"],
+  weight: ["400", "600", "700"], // You can include other weights if needed
+});
+
 export default function IOSClubPage() {
   return (
-    <div className="relative bg-black min-h-screen text-white">
+    <div className={`relative bg-black min-h-screen text-white ${openSans.className}`}>
       <AppBarWhite color="#000000" />
 
       <div>
@@ -71,7 +79,7 @@ export default function IOSClubPage() {
 
       {/* Full-width image */}
       <div className="full-width-image-container">
-        <img
+        <Image
           src="/projects/ios-club-banner.png"
           alt="iOS Club Banner"
           className="full-width-image"
@@ -96,7 +104,7 @@ export default function IOSClubPage() {
             experience and functionality.
           </p>
 
-          <img
+          <Image
             src="/projects/define-ios-club.png"
             alt="definition of ios club"
             className="define-ios-club-img"
@@ -126,7 +134,7 @@ export default function IOSClubPage() {
             and evolving expectations made the experience especially enriching
             and challenging.
           </p>
-          <img
+          <Image
             src="/projects/ios-club-moto.png"
             alt="definition of ios club"
             className="ios-club-moto"
@@ -258,7 +266,7 @@ export default function IOSClubPage() {
             projects I’m proud of, but friendships and lessons I’ll carry far
             beyond campus.
           </p>
-          <img
+          <Image
             src="/projects/ios-group-pic.png"
             alt="group pics of ios club"
             className="ios-group-pic"
