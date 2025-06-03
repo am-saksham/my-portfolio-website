@@ -1,0 +1,823 @@
+/* Gradient between AppBar and Divider */
+/* src/styles/gdgc-club.css */
+
+:root {
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+
+  html,
+  body {
+    background-color: #E0E0DB !important;
+    color-scheme: light;
+    color: black;
+    /* Optional: Reset text color */
+  }
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Black.otf") format("opentype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Semibold.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Medium.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Light.otf") format("opentype");
+  font-weight: 200;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Degular";
+  src: url("/fonts/fonnts.com-DegularDemo-Regular.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+
+body,
+html {
+  background-color: #E0E0DB;
+  /* Set the whole background color */
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  /* Ensure the background color fills the entire height */
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+.relative {
+  background-color: #E0E0DB;
+  /* Apply to the root container */
+  padding-right: 0;
+}
+
+.divider {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  /* Darker color for contrast */
+  margin-bottom: 40px;
+  display: block;
+  position: relative;
+  /* Ensure it's placed in the document flow */
+  z-index: 999;
+  /* Higher than other content */
+}
+
+.gradient-background {
+  padding-top: 0px;
+  padding-left: 9.01vw;
+  top: 0;
+  /* Start right after the AppBar */
+  left: 0;
+  width: 100%;
+  height: 576px;
+  /* 576px - height of the AppBar (assumed to be 61px) */
+  background: linear-gradient(to bottom, #055FFA 50%, #055FFA 30%, #E0E0DB);
+  /* Blue to black gradient */
+  z-index: 1;
+  /* Ensure it stays below the AppBar */
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.main-heading {
+  position: relative;
+  top: -470px;
+  /* Adjust this to place the heading where you want it (based on your gradient height) */
+  left: 9.01vw;
+  font-size: 102px;
+  color: white;
+  font-family: "Degular", sans-serif;
+  font-weight: 500;
+  /* Optional, adjust based on your preferred weight */
+  z-index: 2;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .main-heading {
+    position: relative;
+    top: -506px;
+    /* Adjust this to place the heading where you want it (based on your gradient height) */
+    left: 9.01vw;
+    padding-right: 9.01vw;
+    font-size: 62px;
+    color: white;
+    font-family: "Degular", sans-serif;
+    font-weight: 500;
+    /* Optional, adjust based on your preferred weight */
+    z-index: 2;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .main-heading {
+    position: relative;
+    top: -506px;
+    /* Adjust this to place the heading where you want it (based on your gradient height) */
+    left: 9.01vw;
+    padding-right: 9.01vw;
+    font-size: 62px;
+    color: white;
+    font-family: "Degular", sans-serif;
+    font-weight: 500;
+    /* Optional, adjust based on your preferred weight */
+    z-index: 2;
+  }
+}
+
+.subtext-container {
+  position: relative;
+  top: -450px;
+  /* Slightly below the heading */
+  left: 9.01vw;
+  padding-right: 9.01vw;
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  /* Reduced gap between lines */
+  font-size: 20px;
+  color: white;
+  font-family: "Degular", sans-serif;
+  font-weight: 400;
+  z-index: 2;
+  line-height: 0;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .subtext-container {
+    position: relative;
+    top: -490px;
+    /* Slightly below the heading */
+    left: 9.01vw;
+    right: 9.01vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    /* Reduced gap between lines */
+    font-size: 17px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 400;
+    z-index: 2;
+    line-height: 21.3px;
+  }
+
+  .subtext-container>* {
+    margin: 8;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .subtext-container {
+    position: relative;
+    top: -470px;
+    /* Slightly below the heading */
+    left: 9.01vw;
+    right: 9.01vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    /* Reduced gap between lines */
+    font-size: 17px;
+    color: white;
+    font-family: sans-serif;
+    font-weight: 400;
+    z-index: 2;
+    line-height: 18px;
+  }
+
+  .subtext-container>* {
+    margin: 8;
+  }
+}
+
+.bold-text {
+  font-weight: 700;
+  /* Bold */
+}
+
+/* Wrapper for the section headings */
+.section-headings-wrapper {
+  display: flex;
+  flex-direction: column;
+  /* Arranges items in a column */
+  gap: 20px;
+  /* Adjusts the gap between the headings */
+  margin-left: 9.01vw;
+  margin-top: 229px;
+  /* Aligns them with the left side */
+  margin-right: 9.01vw;
+}
+
+/* Section heading styles */
+.section-heading {
+  font-size: 47px;
+  font-family: "Degular", sans-serif;
+  color: white;
+  display: inline-block;
+  /* Ensures the background wraps tightly around the text */
+  width: fit-content;
+  z-index: 2;
+  margin: 0;
+}
+
+.divider-compact {
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  margin-top: -380px;
+  /* tighter spacing */
+  margin-bottom: 20px;
+  display: block;
+  position: relative;
+  z-index: 999;
+}
+
+@media (max-width: 600px) {
+  .divider-compact {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin-top: -400px;
+    /* tighter spacing */
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    z-index: 999;
+  }
+
+  .section-headings-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* Arranges items in a column */
+    gap: 20px;
+    /* Adjusts the gap between the headings */
+    margin-left: 9.01vw;
+    margin-top: 50px;
+    /* Aligns them with the left side */
+    margin-right: 9.01vw;
+  }
+
+  .section-heading {
+    font-size: 18px;
+    font-family: "Degular", sans-serif;
+    color: white;
+    display: inline-block;
+    /* Ensures the background wraps tightly around the text */
+    width: fit-content;
+    z-index: 2;
+    margin: 0;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .divider-compact {
+    width: 100%;
+    height: 2px;
+    background-color: #000;
+    margin-top: -300px;
+    /* tighter spacing */
+    margin-bottom: 20px;
+    display: block;
+    position: relative;
+    z-index: 999;
+  }
+
+  .section-headings-wrapper {
+    display: flex;
+    flex-direction: column;
+    /* Arranges items in a column */
+    gap: 20px;
+    /* Adjusts the gap between the headings */
+    margin-left: 9.01vw;
+    margin-top: 50px;
+    /* Aligns them with the left side */
+    margin-right: 9.01vw;
+  }
+
+  .section-heading {
+    font-size: 36px;
+    font-family: "Degular", sans-serif;
+    color: white;
+    display: inline-block;
+    /* Ensures the background wraps tightly around the text */
+    width: fit-content;
+    z-index: 2;
+    margin: 0;
+  }
+}
+
+
+.blue-background {
+  background-color: #055FFA;
+  /* Blue color */
+}
+
+.intro-text {
+  margin-left: 9.01vw;
+  margin-right: 9.01vw;
+  margin-top: 71px;
+  font-size: 20px;
+  color: black;
+  font-family: sans-serif;
+  font-weight: 700;
+}
+
+.intro-paragraph {
+  margin-left: 9.01vw;
+  margin-right: 9.01vw;
+  margin-top: 15px;
+  width: 857px;
+  font-size: 20px;
+  color: black;
+  font-family: sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .intro-text {
+    margin-left: 9.01vw;
+    padding-right: 9.01vw;
+    margin-top: 71px;
+    font-size: 16px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+  }
+
+  .intro-paragraph {
+    margin-left: 9.01vw;
+    padding-right: 9.01vw;
+    margin-top: 15px;
+    font-size: 16px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .intro-text {
+    margin-left: 9.01vw;
+    padding-right: 9.01vw;
+    margin-top: 71px;
+    font-size: 18px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 700;
+    box-sizing: border-box;
+  }
+
+  .intro-paragraph {
+    margin-left: 9.01vw;
+    padding-right: 9.01vw;
+    margin-top: 15px;
+    font-size: 18px;
+    color: black;
+    font-family: sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    width: 100%;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    word-break: break-word;
+  }
+}
+
+.full-width-image-container {
+  width: 100vw;
+  height: 60vh;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  overflow: hidden;
+  margin-top: 4.3rem;
+  border-top: 2px solid #000;
+  border-bottom: 2px solid #000;
+  box-sizing: border-box;
+}
+
+.full-width-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.row-header {
+  display: flex;
+  flex-direction: row;
+  margin-left: 173px;
+  margin-right: 173px;
+  margin-top: 114px;
+  gap: 259px;
+  /* Controls spacing between groups (01 + Rescue and overview) */
+  font-family: sans-serif;
+  font-size: 26px;
+}
+
+.number-title {
+  display: flex;
+  flex-direction: row;
+  gap: 69px;
+  /* Increased gap between 01 and Rescue */
+}
+
+.column {
+  flex-shrink: 0;
+}
+
+.serial-number {
+  width: 60px;
+  font-weight: bold;
+  color: #055FFA;
+}
+
+.title {
+  width: 180px;
+  font-weight: bold;
+}
+
+.overview {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.overview-heading {
+  font-size: 20px;
+  font-weight: 700;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.overview-paragraph {
+  font-size: 20px;
+  margin: 0 0 15px 0;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .row-header {
+    display: flex;
+    flex-direction: column;
+    margin-left: 9.01vw;
+    margin-right: 9.01vw;
+    margin-top: 95px;
+    gap: 30px;
+    /* Controls spacing between groups (01 + Rescue and overview) */
+    font-family: sans-serif;
+    font-size: 21px;
+  }
+
+  .number-title {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    /* Increased gap between 01 and Rescue */
+  }
+
+  .column {
+    flex-shrink: 0;
+  }
+
+  .serial-number {
+    width: 60px;
+    font-weight: bold;
+  }
+
+  .title {
+    width: 244px;
+    font-weight: bold;
+  }
+
+  .overview {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .overview-heading {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .overview-paragraph {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .row-header {
+    display: flex;
+    flex-direction: column;
+    margin-left: 9.01vw;
+    margin-right: 9.01vw;
+    margin-top: 95px;
+    gap: 30px;
+    /* Controls spacing between groups (01 + Rescue and overview) */
+    font-family: sans-serif;
+    font-size: 21px;
+  }
+
+  .number-title {
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+    /* Increased gap between 01 and Rescue */
+  }
+
+  .column {
+    flex-shrink: 0;
+  }
+
+  .serial-number {
+    width: 60px;
+    font-weight: bold;
+  }
+
+  .title {
+    width: 244px;
+    font-weight: bold;
+  }
+
+  .overview {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .overview-heading {
+    font-size: 20px;
+    font-weight: 700;
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .overview-paragraph {
+    font-size: 18px;
+    margin: 0 0 15px 0;
+    line-height: 1.5;
+    font-weight: 400;
+  }
+}
+
+.define-ios-club-img {
+  margin-top: 1.65rem;
+  /* adjust as needed */
+  width: 100%;
+  display: block;
+}
+
+.phishguard-img {
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  width: 100%;
+  display: block;
+}
+
+.section-divider {
+  border: none;
+  border-top: 2px solid #000;
+  margin: 3rem 0; /* equal top and bottom margin */
+  width: 100%;
+}
+
+.section-headings-wrapper1 {
+  display: flex;
+  flex-direction: column;
+  /* Arranges items in a column */
+  gap: 20px;
+  /* Adjusts the gap between the headings */
+  margin-left: 9.01vw;
+  margin-top: 112px;
+  /* Aligns them with the left side */
+  padding-bottom: 110px;
+}
+
+.custom-paragraph {
+  width: 625px;
+  font-size: 20px;
+  line-height: 1.5;
+  font-family: sans-serif;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .section-headings-wrapper1 {
+    display: flex;
+    flex-direction: column;
+    /* Arranges items in a column */
+    gap: 20px;
+    /* Adjusts the gap between the headings */
+    margin-left: 9.01vw;
+    margin-right: 9.01vw;
+    margin-top: 50px;
+    /* Aligns them with the left side */
+    padding-bottom: 8px;
+  }
+
+  .custom-paragraph {
+    padding-right: 9.01vw;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    font-weight: 400;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .section-headings-wrapper1 {
+    display: flex;
+    flex-direction: column;
+    /* Arranges items in a column */
+    gap: 20px;
+    /* Adjusts the gap between the headings */
+    margin-left: 9.01vw;
+    margin-right: 9.01vw;
+    margin-top: 50px;
+    /* Aligns them with the left side */
+    padding-bottom: 8px;
+  }
+
+  .custom-paragraph {
+    padding-right: 9.01vw;
+    width: 100%;
+    font-size: 18px;
+    line-height: 1.5;
+    font-family: sans-serif;
+    font-weight: 400;
+  }
+}
+
+.next-page-label {
+  font-size: 26px;
+  font-weight: 400;
+  color: #000;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1.75rem;
+  margin-right: 9.01vw;
+}
+
+.next-page-label:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.previous-page-label {
+  font-size: 26px;
+  font-weight: 400;
+  color: #000;
+  display: inline-block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  margin-bottom: 1.75rem;
+  margin-left: 9.01vw;
+}
+
+.previous-page-label:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .next-page-label {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 1.75rem;
+    margin-right: 9.01vw;
+  }
+
+  .next-page-label:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .previous-page-label {
+    font-size: 18px;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 1.75rem;
+    margin-left: 9.01vw;
+  }
+
+  .previous-page-label:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .next-page-label {
+    font-size: 21px;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 1.75rem;
+    margin-right: 9.01vw;
+  }
+
+  .next-page-label:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  .previous-page-label {
+    font-size: 21px;
+    font-weight: 400;
+    color: #000;
+    display: inline-block;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 1.75rem;
+    margin-left: 9.01vw;
+  }
+
+  .previous-page-label:hover {
+    background-color: #000;
+    color: #fff;
+  }
+}
+
+
+.page-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  font-size: 18px;
+  color: #fff;
+}
+
+.email-link {
+  font-weight: bold;
+  text-decoration: none;
+  color: inherit;
+  padding: 2px 0px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.email-link:hover {
+  background-color: black;
+  color: white;
+}
