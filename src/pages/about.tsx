@@ -2,7 +2,8 @@ import { useState, useEffect } from "react";
 import Head from "next/head";
 import AppBar from "../components/AppBar";
 import "../styles/globals.css";
-import Image from 'next/image';
+import Image from "next/image";
+import * as React from "react";
 
 export default function About() {
   const [gradientPosition, setGradientPosition] = useState({ x: 50, y: 50 });
@@ -102,6 +103,8 @@ export default function About() {
                 <Image
                   src="/profile-pic1.jpg"
                   alt="Profile"
+                  width={200} // choose the actual dimensions
+                  height={200}
                   style={{
                     width: "100%",
                     height: "100%",
@@ -233,6 +236,8 @@ export default function About() {
                 <Image
                   src="/profile-pic1.jpg"
                   alt="Profile"
+                  width={200} // choose the actual dimensions
+                  height={200}
                   style={{
                     width: "100%",
                     height: "100%",

@@ -3,7 +3,7 @@ import React from "react";
 import "@/styles/app-bar-white.css";
 import "@/styles/phishguard.css";
 import { Open_Sans } from "next/font/google";
-import Image from 'next/image';
+import Image from "next/image";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -12,7 +12,9 @@ const openSans = Open_Sans({
 
 export default function GDGCClubPage() {
   return (
-    <div className={`relative bg-black min-h-screen text-white overflow-x-hidden ${openSans.className}`}>
+    <div
+      className={`relative bg-black min-h-screen text-white overflow-x-hidden ${openSans.className}`}
+    >
       <div className="fixed top-0 left-0 right-0 z-50 w-full">
         <AppBarWhite color="#055FFA" />
       </div>
@@ -80,6 +82,8 @@ export default function GDGCClubPage() {
           src="/projects/phishguard-mockup.png"
           alt="iOS Club Banner"
           className="full-width-image"
+          width={1200}
+          height={800}
         />
       </div>
 
@@ -106,11 +110,15 @@ export default function GDGCClubPage() {
             src="/projects/phishguard-img1.png"
             alt="phishguard-img1"
             className="phishguard-img"
+            width={1200}
+            height={329}
           />
           <Image
             src="/projects/phishguard-img2.png"
             alt="phishguard-img2"
             className="phishguard-img"
+            width={1200}
+            height={329}
           />
         </div>
       </div>
@@ -135,6 +143,8 @@ export default function GDGCClubPage() {
             src="/projects/phishguard-img3.png"
             alt="phishguard-img3"
             className="phishguard-img"
+            width={1200}
+            height={111}
           />
           <br />
           <h3 className="overview-heading">Interview Insights</h3>
@@ -158,6 +168,8 @@ export default function GDGCClubPage() {
             src="/projects/phishguard-img4.png"
             alt="phishguard-img4"
             className="phishguard-img"
+            width={1200}
+            height={305}
           />
           <p className="overview-paragraph">
             PhishGuard blends both: it scans in real time (guided) but only
@@ -177,6 +189,8 @@ export default function GDGCClubPage() {
             src="/projects/phishguard-img5.png"
             alt="phishguard-img5"
             className="phishguard-img"
+            width={1200} // ← Replace with your image’s actual width
+            height={337}
           />
         </div>
       </div>
@@ -213,6 +227,8 @@ export default function GDGCClubPage() {
             src="/projects/phishguard-img8.png"
             alt="phishguard-img8"
             className="phishguard-img"
+            width={1200} // ← Replace with your image’s actual width
+            height={694}
           />
         </div>
       </div>
@@ -234,6 +250,8 @@ export default function GDGCClubPage() {
             src="/projects/phishguard-img9.png"
             alt="phishguard-img9"
             className="phishguard-img"
+            width={1200} // ← Replace with your image’s actual width
+            height={289}
           />
         </div>
       </div>

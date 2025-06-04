@@ -5,7 +5,7 @@ import React from "react";
 import "@/styles/app-bar-white.css";
 import "@/styles/ios-club.css";
 import { Open_Sans } from "next/font/google";
-import Image from 'next/image';
+import Image from "next/image";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -14,7 +14,9 @@ const openSans = Open_Sans({
 
 export default function IOSClubPage() {
   return (
-    <div className={`relative bg-black min-h-screen text-white ${openSans.className}`}>
+    <div
+      className={`relative bg-black min-h-screen text-white ${openSans.className}`}
+    >
       <AppBarWhite color="#000000" />
 
       <div>
@@ -83,6 +85,8 @@ export default function IOSClubPage() {
           src="/projects/ios-club-banner.png"
           alt="iOS Club Banner"
           className="full-width-image"
+          width={522}
+          height={363}
         />
       </div>
 
@@ -108,6 +112,8 @@ export default function IOSClubPage() {
             src="/projects/define-ios-club.png"
             alt="definition of ios club"
             className="define-ios-club-img"
+            width={522}
+            height={363}
           />
         </div>
       </div>
@@ -138,6 +144,8 @@ export default function IOSClubPage() {
             src="/projects/ios-club-moto.png"
             alt="definition of ios club"
             className="ios-club-moto"
+            width={522}
+            height={237}
           />
           <p className="overview-paragraph">
             Another big aspect of my time at iOS Club revolved around a word
@@ -270,6 +278,8 @@ export default function IOSClubPage() {
             src="/projects/ios-group-pic.png"
             alt="group pics of ios club"
             className="ios-group-pic"
+            width={522}
+            height={981}
           />
         </div>
       </div>

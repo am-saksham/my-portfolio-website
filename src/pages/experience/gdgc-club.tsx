@@ -3,7 +3,7 @@ import React from "react";
 import "@/styles/app-bar-white.css";
 import "@/styles/gdgc-club.css";
 import { Open_Sans } from "next/font/google";
-import Image from 'next/image';
+import Image from "next/image";
 
 const openSans = Open_Sans({
   subsets: ["latin"],
@@ -12,7 +12,9 @@ const openSans = Open_Sans({
 
 export default function GDGCClubPage() {
   return (
-    <div className={`relative bg-black min-h-screen text-white overflow-x-hidden ${openSans.className}`}>
+    <div
+      className={`relative bg-black min-h-screen text-white overflow-x-hidden ${openSans.className}`}
+    >
       <div className="fixed top-0 left-0 right-0 z-50 w-full">
         <AppBarWhite color="#EA4335" />
       </div>
@@ -158,46 +160,64 @@ export default function GDGCClubPage() {
             src="/projects/rescue1.png"
             alt="Image 1"
             className="gallery-image"
+            width={1200} // estimate width
+            height={728}
           />
           <Image
             src="/projects/rescue2.png"
             alt="Image 1"
             className="gallery-image"
+            width={1200} // estimate width
+            height={728}
           />
           <Image
             src="/projects/rescue3.png"
             alt="Image 1"
             className="gallery-image"
+            width={1200} // estimate width
+            height={728}
           />
           <Image
             src="/projects/rescue4.png"
             alt="Image 1"
             className="gallery-image"
+            width={1200} // estimate width
+            height={728}
           />
           <Image
             src="/projects/rescue5.png"
             alt="Image 1"
             className="gallery-image"
+            width={1200} // estimate width
+            height={728}
           />
           <Image
             src="/projects/rescue6.png"
             alt="Image 1"
             className="gallery-image"
+            width={1200} // estimate width
+            height={728}
           />
           <Image
             src="/projects/rescue7.png"
             alt="Image 1"
             className="gallery-image"
+            width={1200} // estimate width
+            height={728}
           />
           <Image
             src="/projects/rescue8.png"
             alt="Image 1"
             className="gallery-image"
+            width={1200} // estimate width
+            height={728}
           />
           <Image
             src="/projects/rescue9.png"
             alt="Image 1"
             className="gallery-image"
+            width={1200} // estimate width
+            height={728}
           />
         </div>
       </div>
@@ -243,6 +263,8 @@ export default function GDGCClubPage() {
           src="/projects/gdgc_cover.png"
           alt="Description of image"
           className="final-image"
+          width={1200} // Actual or approximate width
+          height={800}
         />
       </div>
 
