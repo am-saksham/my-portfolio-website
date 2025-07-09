@@ -78,6 +78,19 @@ html {
   padding-right: 0;
 }
 
+.noise-video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 10;
+  pointer-events: none; /* Allow interaction with content below */
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+}
+
 .divider {
   width: 100%;
   height: 2px;
@@ -256,7 +269,7 @@ html {
   width: 100%;
   height: 2px;
   background-color: #000;
-  margin-top: -100px;
+  margin-top: -375px;
   /* tighter spacing */
   margin-bottom: 20px;
   display: block;
@@ -264,7 +277,7 @@ html {
   z-index: 999;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   .divider-compact {
     width: 100%;
     height: 2px;
@@ -819,6 +832,7 @@ html {
   /* Prevent any width constraints */
   object-fit: contain;
   scroll-snap-align: start;
+  z-index: 11;
 }
 
 .horizontal-scroll-gallery {

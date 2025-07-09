@@ -57,22 +57,9 @@ export default function About() {
           fontFamily: "'acumin-pro', sans-serif",
         }}
       >
-        {/* Noise Overlay */}
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundImage: "url('/noisy-background.jpg')",
-            backgroundRepeat: "repeat",
-            backgroundSize: "200px 200px",
-            opacity: 0.1,
-            pointerEvents: "none",
-            zIndex: 0,
-          }}
-        />
+        <video className="noise-video-overlay" autoPlay loop muted playsInline>
+        <source src="/noisy_background.mp4" type="video/mp4" />
+      </video>
 
         {/* AppBar */}
         <div style={{ width: "100%", zIndex: 2 }}>
@@ -86,7 +73,7 @@ export default function About() {
             marginTop: "50px",
             paddingLeft: "9.01vw",
             paddingRight: "9.01vw",
-            zIndex: 1,
+            zIndex: 11 ,
             textAlign: "left",
             width: "calc(100% - 18.021vw)",
             display: "flex",
@@ -99,7 +86,7 @@ export default function About() {
           <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
             {/* Profile image above heading (mobile only) */}
             <div className="profile-img-mobile">
-              <div className="profile-img-container">
+              <div className="profile-img-container" style={{ zIndex: 11, position: "relative" }}>
                 <Image
                   src="/profile-pic1.jpg"
                   alt="Profile"

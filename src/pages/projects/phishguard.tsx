@@ -15,6 +15,9 @@ export default function GDGCClubPage() {
     <div
       className={`relative bg-black min-h-screen text-white overflow-x-hidden ${openSans.className}`}
     >
+      <video className="noise-video-overlay" autoPlay loop muted playsInline>
+        <source src="/noisy_background.mp4" type="video/mp4" />
+      </video>
       <div className="fixed top-0 left-0 right-0 z-50 w-full">
         <AppBarWhite color="#055FFA" />
       </div>
@@ -112,6 +115,7 @@ export default function GDGCClubPage() {
             className="phishguard-img"
             width={1200}
             height={329}
+            style={{ zIndex: 11, position: "relative" }}
           />
           <Image
             src="/projects/phishguard-img2.png"
@@ -119,6 +123,7 @@ export default function GDGCClubPage() {
             className="phishguard-img"
             width={1200}
             height={329}
+            style={{ zIndex: 11, position: "relative" }}
           />
         </div>
       </div>
@@ -145,6 +150,7 @@ export default function GDGCClubPage() {
             className="phishguard-img"
             width={1200}
             height={111}
+            style={{ zIndex: 11, position: "relative" }}
           />
           <br />
           <h3 className="overview-heading">Interview Insights</h3>
@@ -170,6 +176,7 @@ export default function GDGCClubPage() {
             className="phishguard-img"
             width={1200}
             height={305}
+            style={{ zIndex: 11, position: "relative" }}
           />
           <p className="overview-paragraph">
             PhishGuard blends both: it scans in real time (guided) but only
@@ -191,6 +198,7 @@ export default function GDGCClubPage() {
             className="phishguard-img"
             width={1200} // ← Replace with your image’s actual width
             height={337}
+            style={{ zIndex: 11, position: "relative" }}
           />
         </div>
       </div>
@@ -229,6 +237,7 @@ export default function GDGCClubPage() {
             className="phishguard-img"
             width={1200} // ← Replace with your image’s actual width
             height={694}
+            style={{ zIndex: 11, position: "relative" }}
           />
         </div>
       </div>
@@ -252,6 +261,7 @@ export default function GDGCClubPage() {
             className="phishguard-img"
             width={1200} // ← Replace with your image’s actual width
             height={289}
+            style={{ zIndex: 11, position: "relative" }}
           />
         </div>
       </div>

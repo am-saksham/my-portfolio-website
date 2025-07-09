@@ -7,6 +7,27 @@
   gap: 40px;
 }
 
+.about-section,
+.contact-links,
+.contact-links li,
+.contact-links a {
+  position: relative; /* Required for z-index to take effect */
+  z-index: 11;
+}
+
+.noise-video-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 10;
+  pointer-events: none; /* Allow interaction with content below */
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+}
+
 .profile-pic-wrapper {
   width: 300px;
   height: 300px;
@@ -55,6 +76,7 @@
   .profile-pic-wrapper {
     width: 220px;
     height: 220px;
+    z-index: 11;
   }
 
   .contact-links {

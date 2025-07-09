@@ -52,13 +52,20 @@ export default function Layout({ children }: { children: React.ReactNode }) {
       <head>
         <title>Saksham Gupta</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap"
           rel="stylesheet"
         />
       </head>
       <body>
+        <video className="noise-video-overlay" autoPlay loop muted playsInline>
+          <source src="/noisy_background.mp4" type="video/mp4" />
+        </video>
         {/* Mouse-Following Circle */}
         {isMouseEffectActive && (
           <div

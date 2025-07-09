@@ -17,6 +17,9 @@ export default function IOSClubPage() {
     <div
       className={`relative bg-black min-h-screen text-white ${openSans.className}`}
     >
+      <video className="noise-video-overlay" autoPlay loop muted playsInline>
+        <source src="/noisy_background.mp4" type="video/mp4" />
+      </video>
       <AppBarWhite color="#000000" />
 
       <div>

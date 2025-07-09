@@ -15,7 +15,10 @@ export default function GDGCClubPage() {
     <div
       className={`relative bg-black min-h-screen text-white overflow-x-hidden ${openSans.className}`}
     >
-      <div className="fixed top-0 left-0 right-0 z-50 w-full">
+      <video className="noise-video-overlay" autoPlay loop muted playsInline>
+        <source src="/noisy_background.mp4" type="video/mp4" />
+      </video>
+      <div className="relative top-0 left-0 right-0 z-5 w-full">
         <AppBarWhite color="#EA4335" />
       </div>
 
