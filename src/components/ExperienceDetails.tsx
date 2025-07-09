@@ -60,7 +60,7 @@ const ExperienceDetails: React.FC<ExperienceDetailsProps> = ({
 
       <div className="text-row">
     <div className="text-column">
-      <Link href={`${type}/${slug}`} className="clean-link">
+      <Link href={`${type}/${slug}`} className="clean-link" prefetch={true}>
         <div className="text-title">
           <span className="black-bg">{title}</span>
         </div>
@@ -69,7 +69,7 @@ const ExperienceDetails: React.FC<ExperienceDetailsProps> = ({
     </div>
 
     <div className="transparent-circle">
-      <Link href={`${type}/${slug}`} className="clean-link">→</Link>
+      <Link href={`${type}/${slug}`} className="clean-link" prefetch={true}>→</Link>
     </div>
   </div>
     </div>
