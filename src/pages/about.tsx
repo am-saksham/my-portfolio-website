@@ -98,6 +98,7 @@ export default function About() {
                     objectFit: "cover",
                     borderRadius: "40px",
                   }}
+                  loading="lazy"
                 />
               </div>
             </div>

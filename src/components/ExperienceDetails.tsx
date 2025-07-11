@@ -55,6 +55,7 @@ const ExperienceDetails: React.FC<ExperienceDetailsProps> = ({
           width={width}
           height={height}
           className="image-animation"
+          loading="lazy"
         />
       ) : null}
 

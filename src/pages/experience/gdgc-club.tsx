@@ -165,6 +165,7 @@ export default function GDGCClubPage() {
             className="gallery-image"
             width={1200} // estimate width
             height={728}
+            loading="lazy"
           />
           <Image
             src="/projects/rescue2.png"
@@ -172,6 +173,7 @@ export default function GDGCClubPage() {
             className="gallery-image"
             width={1200} // estimate width
             height={728}
+            loading="lazy"
           />
           <Image
             src="/projects/rescue3.png"
@@ -179,6 +181,7 @@ export default function GDGCClubPage() {
             className="gallery-image"
             width={1200} // estimate width
             height={728}
+            loading="lazy"
           />
           <Image
             src="/projects/rescue4.png"
@@ -186,6 +189,7 @@ export default function GDGCClubPage() {
             className="gallery-image"
             width={1200} // estimate width
             height={728}
+            loading="lazy"
           />
           <Image
             src="/projects/rescue5.png"
@@ -193,6 +197,7 @@ export default function GDGCClubPage() {
             className="gallery-image"
             width={1200} // estimate width
             height={728}
+            loading="lazy"
           />
           <Image
             src="/projects/rescue6.png"
@@ -200,6 +205,7 @@ export default function GDGCClubPage() {
             className="gallery-image"
             width={1200} // estimate width
             height={728}
+            loading="lazy"
           />
           <Image
             src="/projects/rescue7.png"
@@ -207,6 +213,7 @@ export default function GDGCClubPage() {
             className="gallery-image"
             width={1200} // estimate width
             height={728}
+            loading="lazy"
           />
           <Image
             src="/projects/rescue8.png"
@@ -214,6 +221,7 @@ export default function GDGCClubPage() {
             className="gallery-image"
             width={1200} // estimate width
             height={728}
+            loading="lazy"
           />
           <Image
             src="/projects/rescue9.png"
@@ -221,6 +229,7 @@ export default function GDGCClubPage() {
             className="gallery-image"
             width={1200} // estimate width
             height={728}
+            loading="lazy"
           />
         </div>
       </div>
@@ -268,6 +277,7 @@ export default function GDGCClubPage() {
           className="final-image"
           width={1200} // Actual or approximate width
           height={800}
+          loading="lazy"
         />
       </div>
 

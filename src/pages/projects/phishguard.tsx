@@ -87,6 +87,7 @@ export default function GDGCClubPage() {
           className="full-width-image"
           width={1200}
           height={800}
+          loading="lazy"
         />
       </div>
 
@@ -116,6 +117,7 @@ export default function GDGCClubPage() {
             width={1200}
             height={329}
             style={{ zIndex: 11, position: "relative" }}
+            loading="lazy"
           />
           <Image
             src="/projects/phishguard-img2.png"
@@ -124,6 +126,7 @@ export default function GDGCClubPage() {
             width={1200}
             height={329}
             style={{ zIndex: 11, position: "relative" }}
+            loading="lazy"
           />
         </div>
       </div>
@@ -151,6 +154,7 @@ export default function GDGCClubPage() {
             width={1200}
             height={111}
             style={{ zIndex: 11, position: "relative" }}
+            loading="lazy"
           />
           <br />
           <h3 className="overview-heading">Interview Insights</h3>
@@ -177,6 +181,7 @@ export default function GDGCClubPage() {
             width={1200}
             height={305}
             style={{ zIndex: 11, position: "relative" }}
+            loading="lazy"
           />
           <p className="overview-paragraph">
             PhishGuard blends both: it scans in real time (guided) but only
@@ -199,6 +204,7 @@ export default function GDGCClubPage() {
             width={1200} // ← Replace with your image’s actual width
             height={337}
             style={{ zIndex: 11, position: "relative" }}
+            loading="lazy"
           />
         </div>
       </div>
@@ -238,6 +244,7 @@ export default function GDGCClubPage() {
             width={1200} // ← Replace with your image’s actual width
             height={694}
             style={{ zIndex: 11, position: "relative" }}
+            loading="lazy"
           />
         </div>
       </div>
@@ -262,6 +269,7 @@ export default function GDGCClubPage() {
             width={1200} // ← Replace with your image’s actual width
             height={289}
             style={{ zIndex: 11, position: "relative" }}
+            loading="lazy"
           />
         </div>
       </div>

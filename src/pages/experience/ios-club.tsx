@@ -90,6 +90,7 @@ export default function IOSClubPage() {
           className="full-width-image"
           width={522}
           height={363}
+          loading="lazy"
         />
       </div>
 
@@ -117,6 +118,7 @@ export default function IOSClubPage() {
             className="define-ios-club-img"
             width={522}
             height={363}
+            loading="lazy"
           />
         </div>
       </div>
@@ -149,6 +151,7 @@ export default function IOSClubPage() {
             className="ios-club-moto"
             width={522}
             height={237}
+            loading="lazy"
           />
           <p className="overview-paragraph">
             Another big aspect of my time at iOS Club revolved around a word
@@ -283,6 +286,7 @@ export default function IOSClubPage() {
             className="ios-group-pic"
             width={522}
             height={981}
+            loading="lazy"
           />
         </div>
       </div>
