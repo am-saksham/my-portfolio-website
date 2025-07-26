@@ -209,7 +209,7 @@ export default function About() {
                 <li>
                   →{" "}
                   <a
-                    href="https://drive.google.com/file/d/1owo4CiyGMgUpzlyULAZsq00PmlSx2MmM/view"
+                    href="https://drive.google.com/file/d/1i8oyMDxuaLHjrza5ujQz83-zUqjv1TON/view?usp=sharing"
                     target="_blank"
                     rel="noopener noreferrer"
                     style={{ textDecoration: "none", color: "black" }}
