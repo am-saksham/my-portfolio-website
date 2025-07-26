@@ -245,7 +245,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 </div>
               </Link>
               <Link
-                href="https://drive.google.com/file/d/15EV6kvYkgVgJDsUeMmVWFE9f1KgEnz9T/view?usp=sharing"
+                href="https://drive.google.com/file/d/1i8oyMDxuaLHjrza5ujQz83-zUqjv1TON/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
               >
