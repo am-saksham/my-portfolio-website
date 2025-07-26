@@ -86,7 +86,7 @@ export default function AppBar() {
 
           <div className="social-icons">
             <Link
-              href="https://drive.google.com/file/d/15EV6kvYkgVgJDsUeMmVWFE9f1KgEnz9T/view?usp=sharing"
+              href="https://drive.google.com/file/d/1i8oyMDxuaLHjrza5ujQz83-zUqjv1TON/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -149,7 +149,7 @@ export default function AppBar() {
 
             <div className="mobile-social-icons">
               <Link
-                href="https://drive.google.com/file/d/15EV6kvYkgVgJDsUeMmVWFE9f1KgEnz9T/view?usp=sharing"
+                href="https://drive.google.com/file/d/1i8oyMDxuaLHjrza5ujQz83-zUqjv1TON/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={() => setMenuOpen(false)}
